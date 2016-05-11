@@ -10,7 +10,7 @@
 int sockfd, newsockfd;
 struct sockaddr_in serv_addr, cli_addr;
 const int portno = 8887;
-int pins[] = {0, 1, 2, 3, 4, 5, 6, 21, 22,
+int pins[] = {7, 0, 1, 2, 3, 4, 5, 6, 21, 22,
     23, 24, 25, 26, 27, 28, 29};
 
 void error(const char *msg)
@@ -32,7 +32,7 @@ void createSocket()
         sizeof(serv_addr)) < 0)
         error("ERROR on binding");
     listen(sockfd,5);
-    printf("Waitingg for the client connect...\n");
+    printf("Waiting for the client connect...\n");
 
 }
 
@@ -55,18 +55,22 @@ int main(int argc, char *argv[])
 
     char buffer[17];
     bzero(buffer,17);
-    while(read(newsockfd,buffer,40) >= 0)
+    while(read(newsockfd,  buffer, 17) >= 0)
     {
-        if(buffer[16] != 597138)
-        {
-            printf("Warning! Someone else is trying to control your raspberry!!\n", );
-            close(newsockfd);
-            close(sockfd);
-            return 0;
-        }
+        //if(buffer[17] != 597138)
+        //{
+        //    printf("Warning! Someone else is trying to control your raspberry!!\n");
+        //    close(newsockfd);
+        //    close(sockfd);
+        //    return 0;
+        //}
         int i;
-        for(i = 0; i < 16; i++)
-            digitalWrite(pins[i], buffer[i]);
+        for(i = 0; i < 17; i++)
+        {
+	    digitalWrite(pins[i], buffer[i]);
+	    printf("%d, ", buffer[i]);
+	}
+	printf("\n");
     }
     error("ERROR reading from socket");
     close(newsockfd);
