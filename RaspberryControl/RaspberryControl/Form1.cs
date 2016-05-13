@@ -13,26 +13,91 @@ namespace RaspberryControl
 {
     public partial class mainForm : Form
     {
+
+        TcpClient client;
+        Int32 port = 8887;
+        NetworkStream stream;
+        BackgroundWorker bw = new BackgroundWorker();
+        Boolean connected = false;
+        
+
         public mainForm()
         {
             InitializeComponent();
         }
 
-      
-        private void button1_Click(object sender, EventArgs e)
+        void bw_DoWork(object sender, DoWorkEventArgs e)
         {
-            Int32 port = 8887;
-            string ip = "192.168.1.200";
-            TcpClient client = new TcpClient(ip, port);
-            NetworkStream stream = client.GetStream();
-            byte[] data = {1, 2, 5, 55, 45, 48};
-            for(int i = 0; i < 10; i++)
-                stream.Write(data, 0, data.Length);
-        }
+            try
+            {
+                if (!connected)
+                {
+                    client = new TcpClient(Properties.Settings.Default.ipAdress, port);
+                    stream = client.GetStream();
+                    connected = true;
+                    setText();
+                }
+                else
+                {
+                    client.Close();
+                    stream.Close();
+                    connected = false;
+                    setText();
+                }
+            }
+            catch (Exception ext)
+            {
+                connected = false;
+                setText();
+                MessageBox.Show("Something went wrong: " + ext.Message);
 
+            }
+        }
+      
+        private void setText()
+        {
+            if(connectButon.InvokeRequired)
+            {
+                connectButon.Invoke((Action)delegate{setText();});
+                return;
+            }
+            if(!connected)
+            {
+                connectButon.Text = "Press to connect";
+                status.Text = "Disconnected";
+            }
+            else
+            {
+                connectButon.Text = "Disconnect";
+                status.Text = "Connected";
+            }
+
+        }
         private void mainForm_SizeChanged(object sender, EventArgs e)
         {
-            gpioImage.Location = new Point(this.Width / 2, 100);
+            gpioImage.Location = new Point((this.Width - gpioImage.Width) / 2, 80);
+        }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+            setText();
+            bw.DoWork += bw_DoWork;
+            bw.RunWorkerAsync();
+      
+            gpioImage.Location = new Point((this.Width - gpioImage.Width) / 2, 80);
+            ipAddressTextBox.Text = Properties.Settings.Default.ipAdress;
+        }
+
+        private void connectButon_Click(object sender, EventArgs e)
+        {
+            connectButon.Text = "Wait...";
+            Properties.Settings.Default.ipAdress = ipAddressTextBox.Text;
+            Properties.Settings.Default.Save();
+
+            if (!bw.IsBusy)
+                bw.RunWorkerAsync();
+            else
+                MessageBox.Show("Try again in a few seconds!");
         }
     }
 }
