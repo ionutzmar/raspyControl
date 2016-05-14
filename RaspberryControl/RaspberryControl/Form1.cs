@@ -76,21 +76,25 @@ namespace RaspberryControl
         private void mainForm_SizeChanged(object sender, EventArgs e)
         {
             gpioImage.Location = new Point((this.Width - gpioImage.Width) / 2, 80);
+            gpio12Label.Location = new Point(gpioImage.Location.X - gpio12Label.Width - 10, Convert.ToInt32(gpioImage.Location.Y + gpioImage.Height * 1.5 / 20 - gpio12Label.Height / 2));
+            gpioStatusButton12.Location = new Point(gpio12Label.Location.X - gpioStatusButton12.Width - 10, Convert.ToInt32(gpioImage.Location.Y + gpioImage.Height * 1.5 / 20 - gpioStatusButton12.Height / 2));
+            inOutButtonGpio12.Location = new Point(gpioStatusButton12.Location.X - inOutButtonGpio12.Width - 10, gpioStatusButton12.Location.Y);
         }
 
         private void mainForm_Load(object sender, EventArgs e)
         {
             setText();
+            connectButon.Text = "Trying  to  connect...";
             bw.DoWork += bw_DoWork;
             bw.RunWorkerAsync();
       
-            gpioImage.Location = new Point((this.Width - gpioImage.Width) / 2, 80);
             ipAddressTextBox.Text = Properties.Settings.Default.ipAdress;
+            mainForm_SizeChanged(sender, e);
         }
 
         private void connectButon_Click(object sender, EventArgs e)
         {
-            connectButon.Text = "Wait...";
+            connectButon.Text = "Trying to connect...";
             Properties.Settings.Default.ipAdress = ipAddressTextBox.Text;
             Properties.Settings.Default.Save();
 
@@ -98,6 +102,11 @@ namespace RaspberryControl
                 bw.RunWorkerAsync();
             else
                 MessageBox.Show("Try again in a few seconds!");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
