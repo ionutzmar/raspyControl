@@ -35,85 +35,87 @@
             this.statusLabel = new System.Windows.Forms.Label();
             this.status = new System.Windows.Forms.Label();
             this.connectButon = new System.Windows.Forms.Button();
+            this.gpioStatusButton8 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio8 = new System.Windows.Forms.Button();
+            this.gpioLabel8 = new System.Windows.Forms.Label();
+            this.gpioStatusButton9 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio9 = new System.Windows.Forms.Button();
+            this.gpioLabel9 = new System.Windows.Forms.Label();
+            this.gpioStatusButton7 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio7 = new System.Windows.Forms.Button();
+            this.gpioLabel7 = new System.Windows.Forms.Label();
+            this.gpioStatusButton0 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio0 = new System.Windows.Forms.Button();
+            this.gpioLabel0 = new System.Windows.Forms.Label();
+            this.gpioStatusButton2 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio2 = new System.Windows.Forms.Button();
+            this.gpioLabel2 = new System.Windows.Forms.Label();
+            this.gpioStatusButton3 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio3 = new System.Windows.Forms.Button();
+            this.gpioLabel3 = new System.Windows.Forms.Label();
             this.gpioStatusButton12 = new System.Windows.Forms.Button();
             this.inOutButtonGpio12 = new System.Windows.Forms.Button();
-            this.gpio12Label = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.button43 = new System.Windows.Forms.Button();
-            this.button44 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.button45 = new System.Windows.Forms.Button();
-            this.button46 = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
-            this.button47 = new System.Windows.Forms.Button();
-            this.button48 = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.button49 = new System.Windows.Forms.Button();
-            this.button50 = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
+            this.gpioLabel12 = new System.Windows.Forms.Label();
+            this.gpioStatusButton13 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio13 = new System.Windows.Forms.Button();
+            this.gpioLabel13 = new System.Windows.Forms.Label();
+            this.gpioStatusButton14 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio14 = new System.Windows.Forms.Button();
+            this.gpioLabel14 = new System.Windows.Forms.Label();
+            this.gpioStatusButton21 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio21 = new System.Windows.Forms.Button();
+            this.gpioLabel21 = new System.Windows.Forms.Label();
+            this.gpioStatusButton22 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio22 = new System.Windows.Forms.Button();
+            this.gpioLabel22 = new System.Windows.Forms.Label();
+            this.gpioStatusButton23 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio23 = new System.Windows.Forms.Button();
+            this.gpioLabel23 = new System.Windows.Forms.Label();
+            this.gpioStatusButton24 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio24 = new System.Windows.Forms.Button();
+            this.gpioLabel24 = new System.Windows.Forms.Label();
+            this.gpioStatusButton25 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio25 = new System.Windows.Forms.Button();
+            this.gpioLabel25 = new System.Windows.Forms.Label();
+            this.gpioStatusButton29 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio29 = new System.Windows.Forms.Button();
+            this.gpioLabel29 = new System.Windows.Forms.Label();
+            this.gpioStatusButton28 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio28 = new System.Windows.Forms.Button();
+            this.gpioLabel28 = new System.Windows.Forms.Label();
+            this.gpioStatusButton27 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio27 = new System.Windows.Forms.Button();
+            this.gpioLabel27 = new System.Windows.Forms.Label();
+            this.gpioStatusButton26 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio26 = new System.Windows.Forms.Button();
+            this.gpioLabel26 = new System.Windows.Forms.Label();
+            this.gpioStatusButton11 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio11 = new System.Windows.Forms.Button();
+            this.gpioLabel11 = new System.Windows.Forms.Label();
+            this.gpioStatusButton10 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio10 = new System.Windows.Forms.Button();
+            this.gpioLabel10 = new System.Windows.Forms.Label();
+            this.gpioStatusButton6 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio6 = new System.Windows.Forms.Button();
+            this.gpioLabel6 = new System.Windows.Forms.Label();
+            this.gpioStatusButton5 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio5 = new System.Windows.Forms.Button();
+            this.gpioLabel5 = new System.Windows.Forms.Label();
+            this.gpioStatusButton4 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio4 = new System.Windows.Forms.Button();
+            this.gpioLabel4 = new System.Windows.Forms.Label();
+            this.gpioStatusButton1 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio1 = new System.Windows.Forms.Button();
+            this.gpioLabel1 = new System.Windows.Forms.Label();
+            this.gpioStatusButton16 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio16 = new System.Windows.Forms.Button();
+            this.gpioLabel16 = new System.Windows.Forms.Label();
+            this.gpioStatusButton15 = new System.Windows.Forms.Button();
+            this.inOutButtonGpio15 = new System.Windows.Forms.Button();
+            this.gpioLabel15 = new System.Windows.Forms.Label();
+            this.panelul = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gpioImage)).BeginInit();
+            this.panelul.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpioImage
@@ -123,7 +125,7 @@
             this.gpioImage.Cursor = System.Windows.Forms.Cursors.Default;
             this.gpioImage.Image = ((System.Drawing.Image)(resources.GetObject("gpioImage.Image")));
             this.gpioImage.InitialImage = ((System.Drawing.Image)(resources.GetObject("gpioImage.InitialImage")));
-            this.gpioImage.Location = new System.Drawing.Point(493, 37);
+            this.gpioImage.Location = new System.Drawing.Point(322, 19);
             this.gpioImage.Name = "gpioImage";
             this.gpioImage.Size = new System.Drawing.Size(66, 493);
             this.gpioImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,6 +134,7 @@
             // 
             // ipAddressTextBox
             // 
+            this.ipAddressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ipAddressTextBox.Location = new System.Drawing.Point(895, 55);
             this.ipAddressTextBox.Name = "ipAddressTextBox";
             this.ipAddressTextBox.Size = new System.Drawing.Size(100, 20);
@@ -139,6 +142,7 @@
             // 
             // ipAddressLabel
             // 
+            this.ipAddressLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ipAddressLabel.AutoSize = true;
             this.ipAddressLabel.Location = new System.Drawing.Point(826, 58);
             this.ipAddressLabel.Name = "ipAddressLabel";
@@ -148,6 +152,7 @@
             // 
             // statusLabel
             // 
+            this.statusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.statusLabel.AutoSize = true;
             this.statusLabel.Location = new System.Drawing.Point(849, 98);
             this.statusLabel.Name = "statusLabel";
@@ -157,6 +162,7 @@
             // 
             // status
             // 
+            this.status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.status.AutoSize = true;
             this.status.Location = new System.Drawing.Point(895, 98);
             this.status.Name = "status";
@@ -166,6 +172,7 @@
             // 
             // connectButon
             // 
+            this.connectButon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.connectButon.Location = new System.Drawing.Point(868, 136);
             this.connectButon.Name = "connectButon";
             this.connectButon.Size = new System.Drawing.Size(97, 50);
@@ -174,9 +181,177 @@
             this.connectButon.UseVisualStyleBackColor = true;
             this.connectButon.Click += new System.EventHandler(this.connectButon_Click);
             // 
+            // gpioStatusButton8
+            // 
+            this.gpioStatusButton8.Location = new System.Drawing.Point(187, 43);
+            this.gpioStatusButton8.Name = "gpioStatusButton8";
+            this.gpioStatusButton8.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton8.TabIndex = 7;
+            this.gpioStatusButton8.Text = "button1";
+            this.gpioStatusButton8.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio8
+            // 
+            this.inOutButtonGpio8.Location = new System.Drawing.Point(77, 38);
+            this.inOutButtonGpio8.Name = "inOutButtonGpio8";
+            this.inOutButtonGpio8.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio8.TabIndex = 8;
+            this.inOutButtonGpio8.Text = "INPUT";
+            this.inOutButtonGpio8.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio8.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel8
+            // 
+            this.gpioLabel8.AutoSize = true;
+            this.gpioLabel8.Location = new System.Drawing.Point(268, 53);
+            this.gpioLabel8.Name = "gpioLabel8";
+            this.gpioLabel8.Size = new System.Drawing.Size(42, 13);
+            this.gpioLabel8.TabIndex = 9;
+            this.gpioLabel8.Text = "GPIO 8";
+            // 
+            // gpioStatusButton9
+            // 
+            this.gpioStatusButton9.Location = new System.Drawing.Point(181, 78);
+            this.gpioStatusButton9.Name = "gpioStatusButton9";
+            this.gpioStatusButton9.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton9.TabIndex = 7;
+            this.gpioStatusButton9.Text = "button1";
+            this.gpioStatusButton9.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio9
+            // 
+            this.inOutButtonGpio9.Location = new System.Drawing.Point(77, 78);
+            this.inOutButtonGpio9.Name = "inOutButtonGpio9";
+            this.inOutButtonGpio9.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio9.TabIndex = 8;
+            this.inOutButtonGpio9.Text = "INPUT";
+            this.inOutButtonGpio9.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio9.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel9
+            // 
+            this.gpioLabel9.AutoSize = true;
+            this.gpioLabel9.Location = new System.Drawing.Point(268, 88);
+            this.gpioLabel9.Name = "gpioLabel9";
+            this.gpioLabel9.Size = new System.Drawing.Size(42, 13);
+            this.gpioLabel9.TabIndex = 9;
+            this.gpioLabel9.Text = "GPIO 9";
+            // 
+            // gpioStatusButton7
+            // 
+            this.gpioStatusButton7.Location = new System.Drawing.Point(184, 111);
+            this.gpioStatusButton7.Name = "gpioStatusButton7";
+            this.gpioStatusButton7.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton7.TabIndex = 7;
+            this.gpioStatusButton7.Text = "button1";
+            this.gpioStatusButton7.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio7
+            // 
+            this.inOutButtonGpio7.Location = new System.Drawing.Point(97, 103);
+            this.inOutButtonGpio7.Name = "inOutButtonGpio7";
+            this.inOutButtonGpio7.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio7.TabIndex = 8;
+            this.inOutButtonGpio7.Text = "INPUT";
+            this.inOutButtonGpio7.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio7.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel7
+            // 
+            this.gpioLabel7.AutoSize = true;
+            this.gpioLabel7.Location = new System.Drawing.Point(268, 116);
+            this.gpioLabel7.Name = "gpioLabel7";
+            this.gpioLabel7.Size = new System.Drawing.Size(42, 13);
+            this.gpioLabel7.TabIndex = 9;
+            this.gpioLabel7.Text = "GPIO 7";
+            // 
+            // gpioStatusButton0
+            // 
+            this.gpioStatusButton0.Location = new System.Drawing.Point(181, 147);
+            this.gpioStatusButton0.Name = "gpioStatusButton0";
+            this.gpioStatusButton0.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton0.TabIndex = 7;
+            this.gpioStatusButton0.Text = "button1";
+            this.gpioStatusButton0.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio0
+            // 
+            this.inOutButtonGpio0.Location = new System.Drawing.Point(77, 141);
+            this.inOutButtonGpio0.Name = "inOutButtonGpio0";
+            this.inOutButtonGpio0.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio0.TabIndex = 8;
+            this.inOutButtonGpio0.Text = "INPUT";
+            this.inOutButtonGpio0.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio0.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel0
+            // 
+            this.gpioLabel0.AutoSize = true;
+            this.gpioLabel0.Location = new System.Drawing.Point(268, 157);
+            this.gpioLabel0.Name = "gpioLabel0";
+            this.gpioLabel0.Size = new System.Drawing.Size(42, 13);
+            this.gpioLabel0.TabIndex = 9;
+            this.gpioLabel0.Text = "GPIO 0";
+            // 
+            // gpioStatusButton2
+            // 
+            this.gpioStatusButton2.Location = new System.Drawing.Point(184, 176);
+            this.gpioStatusButton2.Name = "gpioStatusButton2";
+            this.gpioStatusButton2.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton2.TabIndex = 7;
+            this.gpioStatusButton2.Text = "button1";
+            this.gpioStatusButton2.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio2
+            // 
+            this.inOutButtonGpio2.Location = new System.Drawing.Point(97, 166);
+            this.inOutButtonGpio2.Name = "inOutButtonGpio2";
+            this.inOutButtonGpio2.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio2.TabIndex = 8;
+            this.inOutButtonGpio2.Text = "INPUT";
+            this.inOutButtonGpio2.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio2.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel2
+            // 
+            this.gpioLabel2.AutoSize = true;
+            this.gpioLabel2.Location = new System.Drawing.Point(268, 186);
+            this.gpioLabel2.Name = "gpioLabel2";
+            this.gpioLabel2.Size = new System.Drawing.Size(42, 13);
+            this.gpioLabel2.TabIndex = 9;
+            this.gpioLabel2.Text = "GPIO 2";
+            // 
+            // gpioStatusButton3
+            // 
+            this.gpioStatusButton3.Location = new System.Drawing.Point(178, 203);
+            this.gpioStatusButton3.Name = "gpioStatusButton3";
+            this.gpioStatusButton3.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton3.TabIndex = 7;
+            this.gpioStatusButton3.Text = "button1";
+            this.gpioStatusButton3.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio3
+            // 
+            this.inOutButtonGpio3.Location = new System.Drawing.Point(97, 195);
+            this.inOutButtonGpio3.Name = "inOutButtonGpio3";
+            this.inOutButtonGpio3.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio3.TabIndex = 8;
+            this.inOutButtonGpio3.Text = "INPUT";
+            this.inOutButtonGpio3.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio3.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel3
+            // 
+            this.gpioLabel3.AutoSize = true;
+            this.gpioLabel3.Location = new System.Drawing.Point(265, 208);
+            this.gpioLabel3.Name = "gpioLabel3";
+            this.gpioLabel3.Size = new System.Drawing.Size(42, 13);
+            this.gpioLabel3.TabIndex = 9;
+            this.gpioLabel3.Text = "GPIO 3";
+            // 
             // gpioStatusButton12
             // 
-            this.gpioStatusButton12.Location = new System.Drawing.Point(349, 63);
+            this.gpioStatusButton12.Location = new System.Drawing.Point(181, 247);
             this.gpioStatusButton12.Name = "gpioStatusButton12";
             this.gpioStatusButton12.Size = new System.Drawing.Size(75, 23);
             this.gpioStatusButton12.TabIndex = 7;
@@ -185,818 +360,660 @@
             // 
             // inOutButtonGpio12
             // 
-            this.inOutButtonGpio12.Location = new System.Drawing.Point(259, 63);
+            this.inOutButtonGpio12.Location = new System.Drawing.Point(100, 237);
             this.inOutButtonGpio12.Name = "inOutButtonGpio12";
             this.inOutButtonGpio12.Size = new System.Drawing.Size(75, 23);
             this.inOutButtonGpio12.TabIndex = 8;
-            this.inOutButtonGpio12.Text = "button2";
+            this.inOutButtonGpio12.Text = "INPUT";
             this.inOutButtonGpio12.UseVisualStyleBackColor = true;
-            this.inOutButtonGpio12.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // gpio12Label
-            // 
-            this.gpio12Label.AutoSize = true;
-            this.gpio12Label.Location = new System.Drawing.Point(436, 68);
-            this.gpio12Label.Name = "gpio12Label";
-            this.gpio12Label.Size = new System.Drawing.Size(48, 13);
-            this.gpio12Label.TabIndex = 9;
-            this.gpio12Label.Text = "GPIO 12";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(349, 93);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(259, 93);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(436, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "GPIO 12";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(349, 118);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "button1";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(259, 118);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "button2";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(436, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "GPIO 12";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(352, 159);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "button1";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(262, 159);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "button2";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(439, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "GPIO 12";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(352, 185);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "button1";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(262, 185);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "button2";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(439, 190);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "GPIO 12";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(352, 210);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "button1";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(262, 210);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "button2";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(439, 215);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "GPIO 12";
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(349, 259);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "button1";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(259, 259);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 8;
-            this.button12.Text = "button2";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(436, 264);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "GPIO 12";
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(349, 281);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 7;
-            this.button13.Text = "button1";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(259, 281);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 8;
-            this.button14.Text = "button2";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(436, 286);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "GPIO 12";
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(349, 305);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 7;
-            this.button15.Text = "button1";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(259, 305);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 8;
-            this.button16.Text = "button2";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(436, 310);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "GPIO 12";
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(352, 377);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 23);
-            this.button17.TabIndex = 7;
-            this.button17.Text = "button1";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(262, 377);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 23);
-            this.button18.TabIndex = 8;
-            this.button18.Text = "button2";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(439, 382);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "GPIO 12";
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(352, 400);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 23);
-            this.button19.TabIndex = 7;
-            this.button19.Text = "button1";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(262, 400);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 23);
-            this.button20.TabIndex = 8;
-            this.button20.Text = "button2";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(439, 405);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "GPIO 12";
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(349, 423);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 23);
-            this.button21.TabIndex = 7;
-            this.button21.Text = "button1";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(259, 423);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 8;
-            this.button22.Text = "button2";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(436, 428);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "GPIO 12";
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(349, 448);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 23);
-            this.button23.TabIndex = 7;
-            this.button23.Text = "button1";
-            this.button23.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(259, 448);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 23);
-            this.button24.TabIndex = 8;
-            this.button24.Text = "button2";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(436, 453);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 13);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "GPIO 12";
-            // 
-            // button25
-            // 
-            this.button25.Location = new System.Drawing.Point(352, 474);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(75, 23);
-            this.button25.TabIndex = 7;
-            this.button25.Text = "button1";
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // button26
-            // 
-            this.button26.Location = new System.Drawing.Point(262, 474);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(75, 23);
-            this.button26.TabIndex = 8;
-            this.button26.Text = "button2";
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(439, 479);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 13);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "GPIO 12";
-            // 
-            // button27
-            // 
-            this.button27.Location = new System.Drawing.Point(643, 507);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(75, 23);
-            this.button27.TabIndex = 7;
-            this.button27.Text = "button1";
-            this.button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(739, 507);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(75, 23);
-            this.button28.TabIndex = 8;
-            this.button28.Text = "button2";
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(579, 512);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(48, 13);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "GPIO 12";
-            // 
-            // button29
-            // 
-            this.button29.Location = new System.Drawing.Point(643, 478);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(75, 23);
-            this.button29.TabIndex = 7;
-            this.button29.Text = "button1";
-            this.button29.UseVisualStyleBackColor = true;
-            // 
-            // button30
-            // 
-            this.button30.Location = new System.Drawing.Point(739, 478);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 23);
-            this.button30.TabIndex = 8;
-            this.button30.Text = "button2";
-            this.button30.UseVisualStyleBackColor = true;
-            this.button30.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(579, 483);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 13);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "GPIO 12";
-            // 
-            // button31
-            // 
-            this.button31.Location = new System.Drawing.Point(643, 453);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(75, 23);
-            this.button31.TabIndex = 7;
-            this.button31.Text = "button1";
-            this.button31.UseVisualStyleBackColor = true;
-            // 
-            // button32
-            // 
-            this.button32.Location = new System.Drawing.Point(739, 453);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(75, 23);
-            this.button32.TabIndex = 8;
-            this.button32.Text = "button2";
-            this.button32.UseVisualStyleBackColor = true;
-            this.button32.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(579, 458);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 13);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "GPIO 12";
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(643, 405);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(75, 23);
-            this.button33.TabIndex = 7;
-            this.button33.Text = "button1";
-            this.button33.UseVisualStyleBackColor = true;
-            // 
-            // button34
-            // 
-            this.button34.Location = new System.Drawing.Point(739, 405);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(75, 23);
-            this.button34.TabIndex = 8;
-            this.button34.Text = "button2";
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(579, 410);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(48, 13);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "GPIO 12";
-            // 
-            // button35
-            // 
-            this.button35.Location = new System.Drawing.Point(643, 329);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(75, 23);
-            this.button35.TabIndex = 7;
-            this.button35.Text = "button1";
-            this.button35.UseVisualStyleBackColor = true;
-            // 
-            // button36
-            // 
-            this.button36.Location = new System.Drawing.Point(739, 329);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(75, 23);
-            this.button36.TabIndex = 8;
-            this.button36.Text = "button2";
-            this.button36.UseVisualStyleBackColor = true;
-            this.button36.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(579, 334);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(48, 13);
-            this.label18.TabIndex = 9;
-            this.label18.Text = "GPIO 12";
-            // 
-            // button37
-            // 
-            this.button37.Location = new System.Drawing.Point(643, 310);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(75, 23);
-            this.button37.TabIndex = 7;
-            this.button37.Text = "button1";
-            this.button37.UseVisualStyleBackColor = true;
-            // 
-            // button38
-            // 
-            this.button38.Location = new System.Drawing.Point(739, 310);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(75, 23);
-            this.button38.TabIndex = 8;
-            this.button38.Text = "button2";
-            this.button38.UseVisualStyleBackColor = true;
-            this.button38.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(579, 315);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(48, 13);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "GPIO 12";
-            // 
-            // button39
-            // 
-            this.button39.Location = new System.Drawing.Point(643, 286);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(75, 23);
-            this.button39.TabIndex = 7;
-            this.button39.Text = "button1";
-            this.button39.UseVisualStyleBackColor = true;
-            // 
-            // button40
-            // 
-            this.button40.Location = new System.Drawing.Point(739, 286);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(75, 23);
-            this.button40.TabIndex = 8;
-            this.button40.Text = "button2";
-            this.button40.UseVisualStyleBackColor = true;
-            this.button40.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(579, 291);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 13);
-            this.label20.TabIndex = 9;
-            this.label20.Text = "GPIO 12";
-            // 
-            // button41
-            // 
-            this.button41.Location = new System.Drawing.Point(643, 232);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(75, 23);
-            this.button41.TabIndex = 7;
-            this.button41.Text = "button1";
-            this.button41.UseVisualStyleBackColor = true;
-            // 
-            // button42
-            // 
-            this.button42.Location = new System.Drawing.Point(739, 232);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(75, 23);
-            this.button42.TabIndex = 8;
-            this.button42.Text = "button2";
-            this.button42.UseVisualStyleBackColor = true;
-            this.button42.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(579, 237);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(48, 13);
-            this.label21.TabIndex = 9;
-            this.label21.Text = "GPIO 12";
-            // 
-            // button43
-            // 
-            this.button43.Location = new System.Drawing.Point(643, 215);
-            this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(75, 23);
-            this.button43.TabIndex = 7;
-            this.button43.Text = "button1";
-            this.button43.UseVisualStyleBackColor = true;
-            // 
-            // button44
-            // 
-            this.button44.Location = new System.Drawing.Point(739, 215);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(75, 23);
-            this.button44.TabIndex = 8;
-            this.button44.Text = "button2";
-            this.button44.UseVisualStyleBackColor = true;
-            this.button44.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(579, 220);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(48, 13);
-            this.label22.TabIndex = 9;
-            this.label22.Text = "GPIO 12";
-            // 
-            // button45
-            // 
-            this.button45.Location = new System.Drawing.Point(643, 164);
-            this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(75, 23);
-            this.button45.TabIndex = 7;
-            this.button45.Text = "button1";
-            this.button45.UseVisualStyleBackColor = true;
-            // 
-            // button46
-            // 
-            this.button46.Location = new System.Drawing.Point(739, 164);
-            this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(75, 23);
-            this.button46.TabIndex = 8;
-            this.button46.Text = "button2";
-            this.button46.UseVisualStyleBackColor = true;
-            this.button46.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(579, 169);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(48, 13);
-            this.label23.TabIndex = 9;
-            this.label23.Text = "GPIO 12";
-            // 
-            // button47
-            // 
-            this.button47.Location = new System.Drawing.Point(643, 136);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(75, 23);
-            this.button47.TabIndex = 7;
-            this.button47.Text = "button1";
-            this.button47.UseVisualStyleBackColor = true;
-            // 
-            // button48
-            // 
-            this.button48.Location = new System.Drawing.Point(739, 136);
-            this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(75, 23);
-            this.button48.TabIndex = 8;
-            this.button48.Text = "button2";
-            this.button48.UseVisualStyleBackColor = true;
-            this.button48.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(579, 141);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(48, 13);
-            this.label24.TabIndex = 9;
-            this.label24.Text = "GPIO 12";
-            // 
-            // button49
-            // 
-            this.button49.Location = new System.Drawing.Point(643, 118);
-            this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(75, 23);
-            this.button49.TabIndex = 7;
-            this.button49.Text = "button1";
-            this.button49.UseVisualStyleBackColor = true;
-            // 
-            // button50
-            // 
-            this.button50.Location = new System.Drawing.Point(739, 118);
-            this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(75, 23);
-            this.button50.TabIndex = 8;
-            this.button50.Text = "button2";
-            this.button50.UseVisualStyleBackColor = true;
-            this.button50.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(579, 123);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(48, 13);
-            this.label25.TabIndex = 9;
-            this.label25.Text = "GPIO 12";
+            this.inOutButtonGpio12.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel12
+            // 
+            this.gpioLabel12.AutoSize = true;
+            this.gpioLabel12.Location = new System.Drawing.Point(265, 247);
+            this.gpioLabel12.Name = "gpioLabel12";
+            this.gpioLabel12.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel12.TabIndex = 9;
+            this.gpioLabel12.Text = "GPIO 12";
+            // 
+            // gpioStatusButton13
+            // 
+            this.gpioStatusButton13.Location = new System.Drawing.Point(181, 274);
+            this.gpioStatusButton13.Name = "gpioStatusButton13";
+            this.gpioStatusButton13.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton13.TabIndex = 7;
+            this.gpioStatusButton13.Text = "button1";
+            this.gpioStatusButton13.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio13
+            // 
+            this.inOutButtonGpio13.Location = new System.Drawing.Point(97, 266);
+            this.inOutButtonGpio13.Name = "inOutButtonGpio13";
+            this.inOutButtonGpio13.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio13.TabIndex = 8;
+            this.inOutButtonGpio13.Text = "INPUT";
+            this.inOutButtonGpio13.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio13.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel13
+            // 
+            this.gpioLabel13.AutoSize = true;
+            this.gpioLabel13.Location = new System.Drawing.Point(262, 274);
+            this.gpioLabel13.Name = "gpioLabel13";
+            this.gpioLabel13.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel13.TabIndex = 9;
+            this.gpioLabel13.Text = "GPIO 13";
+            // 
+            // gpioStatusButton14
+            // 
+            this.gpioStatusButton14.Location = new System.Drawing.Point(178, 298);
+            this.gpioStatusButton14.Name = "gpioStatusButton14";
+            this.gpioStatusButton14.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton14.TabIndex = 7;
+            this.gpioStatusButton14.Text = "button1";
+            this.gpioStatusButton14.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio14
+            // 
+            this.inOutButtonGpio14.Location = new System.Drawing.Point(97, 290);
+            this.inOutButtonGpio14.Name = "inOutButtonGpio14";
+            this.inOutButtonGpio14.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio14.TabIndex = 8;
+            this.inOutButtonGpio14.Text = "INPUT";
+            this.inOutButtonGpio14.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio14.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel14
+            // 
+            this.gpioLabel14.AutoSize = true;
+            this.gpioLabel14.Location = new System.Drawing.Point(262, 303);
+            this.gpioLabel14.Name = "gpioLabel14";
+            this.gpioLabel14.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel14.TabIndex = 9;
+            this.gpioLabel14.Text = "GPIO 14";
+            // 
+            // gpioStatusButton21
+            // 
+            this.gpioStatusButton21.Location = new System.Drawing.Point(178, 365);
+            this.gpioStatusButton21.Name = "gpioStatusButton21";
+            this.gpioStatusButton21.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton21.TabIndex = 7;
+            this.gpioStatusButton21.Text = "button1";
+            this.gpioStatusButton21.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio21
+            // 
+            this.inOutButtonGpio21.Location = new System.Drawing.Point(88, 360);
+            this.inOutButtonGpio21.Name = "inOutButtonGpio21";
+            this.inOutButtonGpio21.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio21.TabIndex = 8;
+            this.inOutButtonGpio21.Text = "INPUT";
+            this.inOutButtonGpio21.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio21.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel21
+            // 
+            this.gpioLabel21.AutoSize = true;
+            this.gpioLabel21.Location = new System.Drawing.Point(262, 370);
+            this.gpioLabel21.Name = "gpioLabel21";
+            this.gpioLabel21.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel21.TabIndex = 9;
+            this.gpioLabel21.Text = "GPIO 21";
+            // 
+            // gpioStatusButton22
+            // 
+            this.gpioStatusButton22.Location = new System.Drawing.Point(178, 388);
+            this.gpioStatusButton22.Name = "gpioStatusButton22";
+            this.gpioStatusButton22.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton22.TabIndex = 7;
+            this.gpioStatusButton22.Text = "button1";
+            this.gpioStatusButton22.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio22
+            // 
+            this.inOutButtonGpio22.Location = new System.Drawing.Point(85, 388);
+            this.inOutButtonGpio22.Name = "inOutButtonGpio22";
+            this.inOutButtonGpio22.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio22.TabIndex = 8;
+            this.inOutButtonGpio22.Text = "INPUT";
+            this.inOutButtonGpio22.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio22.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel22
+            // 
+            this.gpioLabel22.AutoSize = true;
+            this.gpioLabel22.Location = new System.Drawing.Point(262, 393);
+            this.gpioLabel22.Name = "gpioLabel22";
+            this.gpioLabel22.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel22.TabIndex = 9;
+            this.gpioLabel22.Text = "GPIO 22";
+            // 
+            // gpioStatusButton23
+            // 
+            this.gpioStatusButton23.Location = new System.Drawing.Point(175, 411);
+            this.gpioStatusButton23.Name = "gpioStatusButton23";
+            this.gpioStatusButton23.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton23.TabIndex = 7;
+            this.gpioStatusButton23.Text = "button1";
+            this.gpioStatusButton23.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio23
+            // 
+            this.inOutButtonGpio23.Location = new System.Drawing.Point(88, 411);
+            this.inOutButtonGpio23.Name = "inOutButtonGpio23";
+            this.inOutButtonGpio23.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio23.TabIndex = 8;
+            this.inOutButtonGpio23.Text = "INPUT";
+            this.inOutButtonGpio23.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio23.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel23
+            // 
+            this.gpioLabel23.AutoSize = true;
+            this.gpioLabel23.Location = new System.Drawing.Point(262, 416);
+            this.gpioLabel23.Name = "gpioLabel23";
+            this.gpioLabel23.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel23.TabIndex = 9;
+            this.gpioLabel23.Text = "GPIO 23";
+            // 
+            // gpioStatusButton24
+            // 
+            this.gpioStatusButton24.Location = new System.Drawing.Point(175, 436);
+            this.gpioStatusButton24.Name = "gpioStatusButton24";
+            this.gpioStatusButton24.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton24.TabIndex = 7;
+            this.gpioStatusButton24.Text = "button1";
+            this.gpioStatusButton24.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio24
+            // 
+            this.inOutButtonGpio24.Location = new System.Drawing.Point(85, 440);
+            this.inOutButtonGpio24.Name = "inOutButtonGpio24";
+            this.inOutButtonGpio24.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio24.TabIndex = 8;
+            this.inOutButtonGpio24.Text = "INPUT";
+            this.inOutButtonGpio24.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio24.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel24
+            // 
+            this.gpioLabel24.AutoSize = true;
+            this.gpioLabel24.Location = new System.Drawing.Point(262, 441);
+            this.gpioLabel24.Name = "gpioLabel24";
+            this.gpioLabel24.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel24.TabIndex = 9;
+            this.gpioLabel24.Text = "GPIO 24";
+            // 
+            // gpioStatusButton25
+            // 
+            this.gpioStatusButton25.Location = new System.Drawing.Point(175, 462);
+            this.gpioStatusButton25.Name = "gpioStatusButton25";
+            this.gpioStatusButton25.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton25.TabIndex = 7;
+            this.gpioStatusButton25.Text = "button1";
+            this.gpioStatusButton25.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio25
+            // 
+            this.inOutButtonGpio25.Location = new System.Drawing.Point(88, 462);
+            this.inOutButtonGpio25.Name = "inOutButtonGpio25";
+            this.inOutButtonGpio25.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio25.TabIndex = 8;
+            this.inOutButtonGpio25.Text = "INPUT";
+            this.inOutButtonGpio25.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio25.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel25
+            // 
+            this.gpioLabel25.AutoSize = true;
+            this.gpioLabel25.Location = new System.Drawing.Point(262, 467);
+            this.gpioLabel25.Name = "gpioLabel25";
+            this.gpioLabel25.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel25.TabIndex = 9;
+            this.gpioLabel25.Text = "GPIO 25";
+            // 
+            // gpioStatusButton29
+            // 
+            this.gpioStatusButton29.Location = new System.Drawing.Point(469, 490);
+            this.gpioStatusButton29.Name = "gpioStatusButton29";
+            this.gpioStatusButton29.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton29.TabIndex = 7;
+            this.gpioStatusButton29.Text = "button1";
+            this.gpioStatusButton29.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio29
+            // 
+            this.inOutButtonGpio29.Location = new System.Drawing.Point(571, 495);
+            this.inOutButtonGpio29.Name = "inOutButtonGpio29";
+            this.inOutButtonGpio29.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio29.TabIndex = 8;
+            this.inOutButtonGpio29.Text = "INPUT";
+            this.inOutButtonGpio29.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio29.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel29
+            // 
+            this.gpioLabel29.AutoSize = true;
+            this.gpioLabel29.Location = new System.Drawing.Point(405, 495);
+            this.gpioLabel29.Name = "gpioLabel29";
+            this.gpioLabel29.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel29.TabIndex = 9;
+            this.gpioLabel29.Text = "GPIO 29";
+            // 
+            // gpioStatusButton28
+            // 
+            this.gpioStatusButton28.Location = new System.Drawing.Point(469, 462);
+            this.gpioStatusButton28.Name = "gpioStatusButton28";
+            this.gpioStatusButton28.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton28.TabIndex = 7;
+            this.gpioStatusButton28.Text = "button1";
+            this.gpioStatusButton28.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio28
+            // 
+            this.inOutButtonGpio28.Location = new System.Drawing.Point(571, 467);
+            this.inOutButtonGpio28.Name = "inOutButtonGpio28";
+            this.inOutButtonGpio28.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio28.TabIndex = 8;
+            this.inOutButtonGpio28.Text = "INPUT";
+            this.inOutButtonGpio28.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio28.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel28
+            // 
+            this.gpioLabel28.AutoSize = true;
+            this.gpioLabel28.Location = new System.Drawing.Point(405, 462);
+            this.gpioLabel28.Name = "gpioLabel28";
+            this.gpioLabel28.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel28.TabIndex = 9;
+            this.gpioLabel28.Text = "GPIO 28";
+            // 
+            // gpioStatusButton27
+            // 
+            this.gpioStatusButton27.Location = new System.Drawing.Point(469, 436);
+            this.gpioStatusButton27.Name = "gpioStatusButton27";
+            this.gpioStatusButton27.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton27.TabIndex = 7;
+            this.gpioStatusButton27.Text = "button1";
+            this.gpioStatusButton27.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio27
+            // 
+            this.inOutButtonGpio27.Location = new System.Drawing.Point(571, 436);
+            this.inOutButtonGpio27.Name = "inOutButtonGpio27";
+            this.inOutButtonGpio27.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio27.TabIndex = 8;
+            this.inOutButtonGpio27.Text = "INPUT";
+            this.inOutButtonGpio27.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio27.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel27
+            // 
+            this.gpioLabel27.AutoSize = true;
+            this.gpioLabel27.Location = new System.Drawing.Point(405, 436);
+            this.gpioLabel27.Name = "gpioLabel27";
+            this.gpioLabel27.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel27.TabIndex = 9;
+            this.gpioLabel27.Text = "GPIO 27";
+            // 
+            // gpioStatusButton26
+            // 
+            this.gpioStatusButton26.Location = new System.Drawing.Point(469, 393);
+            this.gpioStatusButton26.Name = "gpioStatusButton26";
+            this.gpioStatusButton26.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton26.TabIndex = 7;
+            this.gpioStatusButton26.Text = "button1";
+            this.gpioStatusButton26.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio26
+            // 
+            this.inOutButtonGpio26.Location = new System.Drawing.Point(571, 393);
+            this.inOutButtonGpio26.Name = "inOutButtonGpio26";
+            this.inOutButtonGpio26.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio26.TabIndex = 8;
+            this.inOutButtonGpio26.Text = "INPUT";
+            this.inOutButtonGpio26.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio26.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel26
+            // 
+            this.gpioLabel26.AutoSize = true;
+            this.gpioLabel26.Location = new System.Drawing.Point(405, 398);
+            this.gpioLabel26.Name = "gpioLabel26";
+            this.gpioLabel26.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel26.TabIndex = 9;
+            this.gpioLabel26.Text = "GPIO 26";
+            // 
+            // gpioStatusButton11
+            // 
+            this.gpioStatusButton11.Location = new System.Drawing.Point(469, 317);
+            this.gpioStatusButton11.Name = "gpioStatusButton11";
+            this.gpioStatusButton11.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton11.TabIndex = 7;
+            this.gpioStatusButton11.Text = "button1";
+            this.gpioStatusButton11.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio11
+            // 
+            this.inOutButtonGpio11.Location = new System.Drawing.Point(565, 317);
+            this.inOutButtonGpio11.Name = "inOutButtonGpio11";
+            this.inOutButtonGpio11.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio11.TabIndex = 8;
+            this.inOutButtonGpio11.Text = "INPUT";
+            this.inOutButtonGpio11.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio11.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel11
+            // 
+            this.gpioLabel11.AutoSize = true;
+            this.gpioLabel11.Location = new System.Drawing.Point(405, 322);
+            this.gpioLabel11.Name = "gpioLabel11";
+            this.gpioLabel11.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel11.TabIndex = 9;
+            this.gpioLabel11.Text = "GPIO 11";
+            // 
+            // gpioStatusButton10
+            // 
+            this.gpioStatusButton10.Location = new System.Drawing.Point(469, 293);
+            this.gpioStatusButton10.Name = "gpioStatusButton10";
+            this.gpioStatusButton10.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton10.TabIndex = 7;
+            this.gpioStatusButton10.Text = "button1";
+            this.gpioStatusButton10.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio10
+            // 
+            this.inOutButtonGpio10.Location = new System.Drawing.Point(565, 293);
+            this.inOutButtonGpio10.Name = "inOutButtonGpio10";
+            this.inOutButtonGpio10.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio10.TabIndex = 8;
+            this.inOutButtonGpio10.Text = "INPUT";
+            this.inOutButtonGpio10.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio10.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel10
+            // 
+            this.gpioLabel10.AutoSize = true;
+            this.gpioLabel10.Location = new System.Drawing.Point(405, 298);
+            this.gpioLabel10.Name = "gpioLabel10";
+            this.gpioLabel10.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel10.TabIndex = 9;
+            this.gpioLabel10.Text = "GPIO 10";
+            // 
+            // gpioStatusButton6
+            // 
+            this.gpioStatusButton6.Location = new System.Drawing.Point(469, 271);
+            this.gpioStatusButton6.Name = "gpioStatusButton6";
+            this.gpioStatusButton6.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton6.TabIndex = 7;
+            this.gpioStatusButton6.Text = "button1";
+            this.gpioStatusButton6.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio6
+            // 
+            this.inOutButtonGpio6.Location = new System.Drawing.Point(565, 271);
+            this.inOutButtonGpio6.Name = "inOutButtonGpio6";
+            this.inOutButtonGpio6.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio6.TabIndex = 8;
+            this.inOutButtonGpio6.Text = "INPUT";
+            this.inOutButtonGpio6.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio6.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel6
+            // 
+            this.gpioLabel6.AutoSize = true;
+            this.gpioLabel6.Location = new System.Drawing.Point(405, 276);
+            this.gpioLabel6.Name = "gpioLabel6";
+            this.gpioLabel6.Size = new System.Drawing.Size(42, 13);
+            this.gpioLabel6.TabIndex = 9;
+            this.gpioLabel6.Text = "GPIO 6";
+            // 
+            // gpioStatusButton5
+            // 
+            this.gpioStatusButton5.Location = new System.Drawing.Point(469, 224);
+            this.gpioStatusButton5.Name = "gpioStatusButton5";
+            this.gpioStatusButton5.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton5.TabIndex = 7;
+            this.gpioStatusButton5.Text = "button1";
+            this.gpioStatusButton5.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio5
+            // 
+            this.inOutButtonGpio5.Location = new System.Drawing.Point(565, 225);
+            this.inOutButtonGpio5.Name = "inOutButtonGpio5";
+            this.inOutButtonGpio5.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio5.TabIndex = 8;
+            this.inOutButtonGpio5.Text = "INPUT";
+            this.inOutButtonGpio5.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio5.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel5
+            // 
+            this.gpioLabel5.AutoSize = true;
+            this.gpioLabel5.Location = new System.Drawing.Point(405, 230);
+            this.gpioLabel5.Name = "gpioLabel5";
+            this.gpioLabel5.Size = new System.Drawing.Size(42, 13);
+            this.gpioLabel5.TabIndex = 9;
+            this.gpioLabel5.Text = "GPIO 5";
+            // 
+            // gpioStatusButton4
+            // 
+            this.gpioStatusButton4.Location = new System.Drawing.Point(469, 195);
+            this.gpioStatusButton4.Name = "gpioStatusButton4";
+            this.gpioStatusButton4.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton4.TabIndex = 7;
+            this.gpioStatusButton4.Text = "button1";
+            this.gpioStatusButton4.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio4
+            // 
+            this.inOutButtonGpio4.Location = new System.Drawing.Point(568, 195);
+            this.inOutButtonGpio4.Name = "inOutButtonGpio4";
+            this.inOutButtonGpio4.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio4.TabIndex = 8;
+            this.inOutButtonGpio4.Text = "INPUT";
+            this.inOutButtonGpio4.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio4.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel4
+            // 
+            this.gpioLabel4.AutoSize = true;
+            this.gpioLabel4.Location = new System.Drawing.Point(405, 208);
+            this.gpioLabel4.Name = "gpioLabel4";
+            this.gpioLabel4.Size = new System.Drawing.Size(42, 13);
+            this.gpioLabel4.TabIndex = 9;
+            this.gpioLabel4.Text = "GPIO 4";
+            // 
+            // gpioStatusButton1
+            // 
+            this.gpioStatusButton1.Location = new System.Drawing.Point(469, 157);
+            this.gpioStatusButton1.Name = "gpioStatusButton1";
+            this.gpioStatusButton1.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton1.TabIndex = 7;
+            this.gpioStatusButton1.Text = "button1";
+            this.gpioStatusButton1.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio1
+            // 
+            this.inOutButtonGpio1.Location = new System.Drawing.Point(571, 147);
+            this.inOutButtonGpio1.Name = "inOutButtonGpio1";
+            this.inOutButtonGpio1.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio1.TabIndex = 8;
+            this.inOutButtonGpio1.Text = "INPUT";
+            this.inOutButtonGpio1.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio1.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel1
+            // 
+            this.gpioLabel1.AutoSize = true;
+            this.gpioLabel1.Location = new System.Drawing.Point(405, 162);
+            this.gpioLabel1.Name = "gpioLabel1";
+            this.gpioLabel1.Size = new System.Drawing.Size(42, 13);
+            this.gpioLabel1.TabIndex = 9;
+            this.gpioLabel1.Text = "GPIO 1";
+            // 
+            // gpioStatusButton16
+            // 
+            this.gpioStatusButton16.Location = new System.Drawing.Point(469, 124);
+            this.gpioStatusButton16.Name = "gpioStatusButton16";
+            this.gpioStatusButton16.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton16.TabIndex = 7;
+            this.gpioStatusButton16.Text = "button1";
+            this.gpioStatusButton16.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio16
+            // 
+            this.inOutButtonGpio16.Location = new System.Drawing.Point(568, 123);
+            this.inOutButtonGpio16.Name = "inOutButtonGpio16";
+            this.inOutButtonGpio16.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio16.TabIndex = 8;
+            this.inOutButtonGpio16.Text = "INPUT";
+            this.inOutButtonGpio16.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio16.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel16
+            // 
+            this.gpioLabel16.AutoSize = true;
+            this.gpioLabel16.Location = new System.Drawing.Point(405, 134);
+            this.gpioLabel16.Name = "gpioLabel16";
+            this.gpioLabel16.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel16.TabIndex = 9;
+            this.gpioLabel16.Text = "GPIO 16";
+            // 
+            // gpioStatusButton15
+            // 
+            this.gpioStatusButton15.Location = new System.Drawing.Point(469, 95);
+            this.gpioStatusButton15.Name = "gpioStatusButton15";
+            this.gpioStatusButton15.Size = new System.Drawing.Size(75, 23);
+            this.gpioStatusButton15.TabIndex = 7;
+            this.gpioStatusButton15.Text = "button1";
+            this.gpioStatusButton15.UseVisualStyleBackColor = true;
+            // 
+            // inOutButtonGpio15
+            // 
+            this.inOutButtonGpio15.Location = new System.Drawing.Point(568, 95);
+            this.inOutButtonGpio15.Name = "inOutButtonGpio15";
+            this.inOutButtonGpio15.Size = new System.Drawing.Size(75, 23);
+            this.inOutButtonGpio15.TabIndex = 8;
+            this.inOutButtonGpio15.Text = "INPUT";
+            this.inOutButtonGpio15.UseVisualStyleBackColor = true;
+            this.inOutButtonGpio15.Click += new System.EventHandler(this.inOutPressed);
+            // 
+            // gpioLabel15
+            // 
+            this.gpioLabel15.AutoSize = true;
+            this.gpioLabel15.Location = new System.Drawing.Point(405, 108);
+            this.gpioLabel15.Name = "gpioLabel15";
+            this.gpioLabel15.Size = new System.Drawing.Size(48, 13);
+            this.gpioLabel15.TabIndex = 9;
+            this.gpioLabel15.Text = "GPIO 15";
+            // 
+            // panelul
+            // 
+            this.panelul.Controls.Add(this.inOutButtonGpio29);
+            this.panelul.Controls.Add(this.inOutButtonGpio28);
+            this.panelul.Controls.Add(this.inOutButtonGpio27);
+            this.panelul.Controls.Add(this.gpioLabel29);
+            this.panelul.Controls.Add(this.gpioLabel28);
+            this.panelul.Controls.Add(this.gpioLabel27);
+            this.panelul.Controls.Add(this.gpioStatusButton29);
+            this.panelul.Controls.Add(this.gpioStatusButton28);
+            this.panelul.Controls.Add(this.gpioStatusButton27);
+            this.panelul.Controls.Add(this.gpioLabel1);
+            this.panelul.Controls.Add(this.gpioLabel16);
+            this.panelul.Controls.Add(this.gpioLabel26);
+            this.panelul.Controls.Add(this.inOutButtonGpio26);
+            this.panelul.Controls.Add(this.gpioLabel11);
+            this.panelul.Controls.Add(this.gpioLabel10);
+            this.panelul.Controls.Add(this.gpioLabel6);
+            this.panelul.Controls.Add(this.gpioLabel5);
+            this.panelul.Controls.Add(this.gpioStatusButton26);
+            this.panelul.Controls.Add(this.gpioLabel4);
+            this.panelul.Controls.Add(this.gpioLabel15);
+            this.panelul.Controls.Add(this.gpioStatusButton1);
+            this.panelul.Controls.Add(this.inOutButtonGpio11);
+            this.panelul.Controls.Add(this.inOutButtonGpio10);
+            this.panelul.Controls.Add(this.gpioLabel25);
+            this.panelul.Controls.Add(this.inOutButtonGpio8);
+            this.panelul.Controls.Add(this.gpioLabel24);
+            this.panelul.Controls.Add(this.inOutButtonGpio25);
+            this.panelul.Controls.Add(this.gpioImage);
+            this.panelul.Controls.Add(this.gpioLabel23);
+            this.panelul.Controls.Add(this.inOutButtonGpio9);
+            this.panelul.Controls.Add(this.gpioLabel22);
+            this.panelul.Controls.Add(this.inOutButtonGpio6);
+            this.panelul.Controls.Add(this.inOutButtonGpio24);
+            this.panelul.Controls.Add(this.inOutButtonGpio7);
+            this.panelul.Controls.Add(this.inOutButtonGpio0);
+            this.panelul.Controls.Add(this.inOutButtonGpio23);
+            this.panelul.Controls.Add(this.inOutButtonGpio2);
+            this.panelul.Controls.Add(this.gpioStatusButton22);
+            this.panelul.Controls.Add(this.gpioStatusButton23);
+            this.panelul.Controls.Add(this.gpioStatusButton24);
+            this.panelul.Controls.Add(this.gpioStatusButton25);
+            this.panelul.Controls.Add(this.inOutButtonGpio3);
+            this.panelul.Controls.Add(this.inOutButtonGpio22);
+            this.panelul.Controls.Add(this.inOutButtonGpio5);
+            this.panelul.Controls.Add(this.inOutButtonGpio21);
+            this.panelul.Controls.Add(this.gpioLabel21);
+            this.panelul.Controls.Add(this.inOutButtonGpio4);
+            this.panelul.Controls.Add(this.inOutButtonGpio12);
+            this.panelul.Controls.Add(this.inOutButtonGpio13);
+            this.panelul.Controls.Add(this.inOutButtonGpio1);
+            this.panelul.Controls.Add(this.inOutButtonGpio16);
+            this.panelul.Controls.Add(this.inOutButtonGpio14);
+            this.panelul.Controls.Add(this.gpioStatusButton8);
+            this.panelul.Controls.Add(this.gpioStatusButton11);
+            this.panelul.Controls.Add(this.inOutButtonGpio15);
+            this.panelul.Controls.Add(this.gpioStatusButton21);
+            this.panelul.Controls.Add(this.gpioStatusButton9);
+            this.panelul.Controls.Add(this.gpioStatusButton10);
+            this.panelul.Controls.Add(this.gpioStatusButton7);
+            this.panelul.Controls.Add(this.gpioStatusButton0);
+            this.panelul.Controls.Add(this.gpioStatusButton2);
+            this.panelul.Controls.Add(this.gpioStatusButton3);
+            this.panelul.Controls.Add(this.gpioStatusButton6);
+            this.panelul.Controls.Add(this.gpioStatusButton12);
+            this.panelul.Controls.Add(this.gpioStatusButton13);
+            this.panelul.Controls.Add(this.gpioStatusButton14);
+            this.panelul.Controls.Add(this.gpioLabel8);
+            this.panelul.Controls.Add(this.gpioStatusButton5);
+            this.panelul.Controls.Add(this.gpioLabel9);
+            this.panelul.Controls.Add(this.gpioLabel7);
+            this.panelul.Controls.Add(this.gpioLabel0);
+            this.panelul.Controls.Add(this.gpioLabel2);
+            this.panelul.Controls.Add(this.gpioStatusButton4);
+            this.panelul.Controls.Add(this.gpioLabel3);
+            this.panelul.Controls.Add(this.gpioLabel12);
+            this.panelul.Controls.Add(this.gpioLabel13);
+            this.panelul.Controls.Add(this.gpioLabel14);
+            this.panelul.Controls.Add(this.gpioStatusButton15);
+            this.panelul.Controls.Add(this.gpioStatusButton16);
+            this.panelul.Location = new System.Drawing.Point(197, 74);
+            this.panelul.Name = "panelul";
+            this.panelul.Size = new System.Drawing.Size(646, 516);
+            this.panelul.TabIndex = 10;
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 611);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.button50);
-            this.Controls.Add(this.button48);
-            this.Controls.Add(this.button46);
-            this.Controls.Add(this.button44);
-            this.Controls.Add(this.button42);
-            this.Controls.Add(this.button40);
-            this.Controls.Add(this.button38);
-            this.Controls.Add(this.button36);
-            this.Controls.Add(this.button34);
-            this.Controls.Add(this.button32);
-            this.Controls.Add(this.button30);
-            this.Controls.Add(this.button28);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.button26);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.button24);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.button22);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.button20);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button49);
-            this.Controls.Add(this.button47);
-            this.Controls.Add(this.button45);
-            this.Controls.Add(this.button43);
-            this.Controls.Add(this.button41);
-            this.Controls.Add(this.button39);
-            this.Controls.Add(this.button37);
-            this.Controls.Add(this.button35);
-            this.Controls.Add(this.button33);
-            this.Controls.Add(this.button31);
-            this.Controls.Add(this.button29);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button27);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button25);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button23);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.gpio12Label);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.inOutButtonGpio12);
-            this.Controls.Add(this.gpioStatusButton12);
             this.Controls.Add(this.connectButon);
             this.Controls.Add(this.status);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.ipAddressLabel);
             this.Controls.Add(this.ipAddressTextBox);
-            this.Controls.Add(this.gpioImage);
-            this.MinimumSize = new System.Drawing.Size(300, 300);
+            this.Controls.Add(this.panelul);
+            this.MinimumSize = new System.Drawing.Size(800, 650);
             this.Name = "mainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.mainForm_Load);
             this.SizeChanged += new System.EventHandler(this.mainForm_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.gpioImage)).EndInit();
+            this.panelul.ResumeLayout(false);
+            this.panelul.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1009,84 +1026,85 @@
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Label status;
         private System.Windows.Forms.Button connectButon;
+        private System.Windows.Forms.Button gpioStatusButton8;
+        private System.Windows.Forms.Button inOutButtonGpio8;
+        private System.Windows.Forms.Label gpioLabel8;
+        private System.Windows.Forms.Button gpioStatusButton9;
+        private System.Windows.Forms.Button inOutButtonGpio9;
+        private System.Windows.Forms.Label gpioLabel9;
+        private System.Windows.Forms.Button gpioStatusButton7;
+        private System.Windows.Forms.Button inOutButtonGpio7;
+        private System.Windows.Forms.Label gpioLabel7;
+        private System.Windows.Forms.Button gpioStatusButton0;
+        private System.Windows.Forms.Button inOutButtonGpio0;
+        private System.Windows.Forms.Label gpioLabel0;
+        private System.Windows.Forms.Button gpioStatusButton2;
+        private System.Windows.Forms.Button inOutButtonGpio2;
+        private System.Windows.Forms.Label gpioLabel2;
+        private System.Windows.Forms.Button gpioStatusButton3;
+        private System.Windows.Forms.Button inOutButtonGpio3;
+        private System.Windows.Forms.Label gpioLabel3;
         private System.Windows.Forms.Button gpioStatusButton12;
         private System.Windows.Forms.Button inOutButtonGpio12;
-        private System.Windows.Forms.Label gpio12Label;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Button button38;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button43;
-        private System.Windows.Forms.Button button44;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button button45;
-        private System.Windows.Forms.Button button46;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button47;
-        private System.Windows.Forms.Button button48;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button49;
-        private System.Windows.Forms.Button button50;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label gpioLabel12;
+        private System.Windows.Forms.Button gpioStatusButton13;
+        private System.Windows.Forms.Button inOutButtonGpio13;
+        private System.Windows.Forms.Label gpioLabel13;
+        private System.Windows.Forms.Button gpioStatusButton14;
+        private System.Windows.Forms.Button inOutButtonGpio14;
+        private System.Windows.Forms.Label gpioLabel14;
+        private System.Windows.Forms.Button gpioStatusButton21;
+        private System.Windows.Forms.Button inOutButtonGpio21;
+        private System.Windows.Forms.Label gpioLabel21;
+        private System.Windows.Forms.Button gpioStatusButton22;
+        private System.Windows.Forms.Button inOutButtonGpio22;
+        private System.Windows.Forms.Label gpioLabel22;
+        private System.Windows.Forms.Button gpioStatusButton23;
+        private System.Windows.Forms.Button inOutButtonGpio23;
+        private System.Windows.Forms.Label gpioLabel23;
+        private System.Windows.Forms.Button gpioStatusButton24;
+        private System.Windows.Forms.Button inOutButtonGpio24;
+        private System.Windows.Forms.Label gpioLabel24;
+        private System.Windows.Forms.Button gpioStatusButton25;
+        private System.Windows.Forms.Button inOutButtonGpio25;
+        private System.Windows.Forms.Label gpioLabel25;
+        private System.Windows.Forms.Button gpioStatusButton29;
+        private System.Windows.Forms.Button inOutButtonGpio29;
+        private System.Windows.Forms.Label gpioLabel29;
+        private System.Windows.Forms.Button gpioStatusButton28;
+        private System.Windows.Forms.Button inOutButtonGpio28;
+        private System.Windows.Forms.Label gpioLabel28;
+        private System.Windows.Forms.Button gpioStatusButton27;
+        private System.Windows.Forms.Button inOutButtonGpio27;
+        private System.Windows.Forms.Label gpioLabel27;
+        private System.Windows.Forms.Button gpioStatusButton26;
+        private System.Windows.Forms.Button inOutButtonGpio26;
+        private System.Windows.Forms.Label gpioLabel26;
+        private System.Windows.Forms.Button gpioStatusButton11;
+        private System.Windows.Forms.Button inOutButtonGpio11;
+        private System.Windows.Forms.Label gpioLabel11;
+        private System.Windows.Forms.Button gpioStatusButton10;
+        private System.Windows.Forms.Button inOutButtonGpio10;
+        private System.Windows.Forms.Label gpioLabel10;
+        private System.Windows.Forms.Button gpioStatusButton6;
+        private System.Windows.Forms.Button inOutButtonGpio6;
+        private System.Windows.Forms.Label gpioLabel6;
+        private System.Windows.Forms.Button gpioStatusButton5;
+        private System.Windows.Forms.Button inOutButtonGpio5;
+        private System.Windows.Forms.Label gpioLabel5;
+        private System.Windows.Forms.Button gpioStatusButton4;
+        private System.Windows.Forms.Button inOutButtonGpio4;
+        private System.Windows.Forms.Label gpioLabel4;
+        private System.Windows.Forms.Button gpioStatusButton1;
+        private System.Windows.Forms.Button inOutButtonGpio1;
+        private System.Windows.Forms.Label gpioLabel1;
+        private System.Windows.Forms.Button gpioStatusButton16;
+        private System.Windows.Forms.Button inOutButtonGpio16;
+        private System.Windows.Forms.Label gpioLabel16;
+        private System.Windows.Forms.Button gpioStatusButton15;
+        private System.Windows.Forms.Button inOutButtonGpio15;
+        private System.Windows.Forms.Label gpioLabel15;
+        private System.Windows.Forms.Panel panelul;
     }
 }
 
