@@ -10,8 +10,6 @@
 int sockfd, newsockfd;
 struct sockaddr_in serv_addr, cli_addr;
 const int portno = 8887;
-int pins[] = {7, 0, 1, 2, 3, 4, 5, 6, 21, 22,
-    23, 24, 25, 26, 27, 28, 29};
 
 void error(const char *msg)
 {
@@ -53,11 +51,11 @@ int main(int argc, char *argv[])
     createSocket();
     acceptClient();
 
-    char buffer[17];
-    bzero(buffer,17);
-    while(read(newsockfd,  buffer, 17) >= 0)
+    char buffer[4];
+    bzero(buffer,4);
+    while(read(newsockfd,  buffer, 4) > 0)
     {
-        //if(buffer[17] != 597138)
+        //if(buffer[3] != 100)
         //{
         //    printf("Warning! Someone else is trying to control your raspberry!!\n");
         //    close(newsockfd);
@@ -65,9 +63,9 @@ int main(int argc, char *argv[])
         //    return 0;
         //}
         int i;
-        for(i = 0; i < 17; i++)
+        for(i = 0; i < 4 ; i++)
         {
-	    digitalWrite(pins[i], buffer[i]);
+	    //digitalWrite(pins[i], buffer[i]);
 	    printf("%d, ", buffer[i]);
 	}
 	printf("\n");
