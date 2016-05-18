@@ -20,7 +20,6 @@ namespace RaspberryControl
         BackgroundWorker bw = new BackgroundWorker();
         bool connected = false;
         byte[] dataOut = new byte[4];
-
         
 
         public mainForm()
@@ -82,19 +81,108 @@ namespace RaspberryControl
             
         }
 
+        void setButtons()
+        {
+            Button[] inOutButtons = new Button[]{inOutButtonGpio8, inOutButtonGpio9, inOutButtonGpio7, inOutButtonGpio0, inOutButtonGpio2, inOutButtonGpio3, inOutButtonGpio12, inOutButtonGpio13, inOutButtonGpio14, inOutButtonGpio21, inOutButtonGpio22, inOutButtonGpio23, inOutButtonGpio24, inOutButtonGpio25, inOutButtonGpio15, inOutButtonGpio16, inOutButtonGpio1, inOutButtonGpio4, inOutButtonGpio5, inOutButtonGpio6, inOutButtonGpio10, inOutButtonGpio11, inOutButtonGpio26, inOutButtonGpio27, inOutButtonGpio28, inOutButtonGpio29};
+            Button[] gpioStatusButtons = new Button[] { gpioStatusButton8, gpioStatusButton9, gpioStatusButton7, gpioStatusButton0, gpioStatusButton2, gpioStatusButton3, gpioStatusButton12, gpioStatusButton13, gpioStatusButton14, gpioStatusButton21, gpioStatusButton22, gpioStatusButton23, gpioStatusButton24, gpioStatusButton25, gpioStatusButton15, gpioStatusButton16, gpioStatusButton1, gpioStatusButton4, gpioStatusButton5, gpioStatusButton6, gpioStatusButton10, gpioStatusButton11, gpioStatusButton26, gpioStatusButton27, gpioStatusButton28, gpioStatusButton29};
+            for (int i = 0; i < 26; i++)
+            {
+                inOutButtons[i].Text = "INPUT";
+                gpioStatusButtons[i].Text = "Value: LOW";
+            }
+
+        }
+
+        private void eraseData()
+        {
+            for (int i = 0; i < 4; i++)
+                dataOut[i] = 0;
+        }
+
+        private void gpioStatusPressed(object sender, EventArgs e)
+        {
+            if(!connected)
+            {
+                MessageBox.Show("You need to be connected first!");
+                return;
+            }
+            Button[] inOutButtons = new Button[] { inOutButtonGpio8, inOutButtonGpio9, inOutButtonGpio7, inOutButtonGpio0, inOutButtonGpio2, inOutButtonGpio3, inOutButtonGpio12, inOutButtonGpio13, inOutButtonGpio14, inOutButtonGpio21, inOutButtonGpio22, inOutButtonGpio23, inOutButtonGpio24, inOutButtonGpio25, inOutButtonGpio15, inOutButtonGpio16, inOutButtonGpio1, inOutButtonGpio4, inOutButtonGpio5, inOutButtonGpio6, inOutButtonGpio10, inOutButtonGpio11, inOutButtonGpio26, inOutButtonGpio27, inOutButtonGpio28, inOutButtonGpio29 };
+            Button[] gpioStatusButtons = new Button[] { gpioStatusButton8, gpioStatusButton9, gpioStatusButton7, gpioStatusButton0, gpioStatusButton2, gpioStatusButton3, gpioStatusButton12, gpioStatusButton13, gpioStatusButton14, gpioStatusButton21, gpioStatusButton22, gpioStatusButton23, gpioStatusButton24, gpioStatusButton25, gpioStatusButton15, gpioStatusButton16, gpioStatusButton1, gpioStatusButton4, gpioStatusButton5, gpioStatusButton6, gpioStatusButton10, gpioStatusButton11, gpioStatusButton26, gpioStatusButton27, gpioStatusButton28, gpioStatusButton29 };
+            var button = (Button)sender;
+            int gpio = Convert.ToInt32(button.Name.Substring(16));
+            eraseData();
+            dataOut[0] = (byte)gpio;
+            int i;
+            for (i = 0; i < 26; i++)
+            {
+                if(inOutButtons[i].Name.Substring(15) == button.Name.Substring(16))
+                    break;
+            }
+            if(inOutButtons[i].Text == "INPUT")
+            {
+                dataOut[1] = 0;
+                dataOut[2] = 0;
+            }
+            else
+            {
+                dataOut[1] = 1;
+                if (gpioStatusButtons[i].Text == "LOW")
+                {
+                    dataOut[2] = 1;
+                    gpioStatusButtons[i].Text = "HIGH";
+                }
+                else
+                {
+                    dataOut[2] = 0;
+                    gpioStatusButtons[i].Text = "LOW";
+                }
+            }
+  
+            dataOut[3] = 101;
+            stream.Write(dataOut, 0, dataOut.Length);
+        }
         private void inOutPressed(object sender, EventArgs e)
         {
             if (connected)
             {
                 try
                 {
+                    Button[] gpioStatusButtons = new Button[] { gpioStatusButton8, gpioStatusButton9, gpioStatusButton7, gpioStatusButton0, gpioStatusButton2, gpioStatusButton3, gpioStatusButton12, gpioStatusButton13, gpioStatusButton14, gpioStatusButton21, gpioStatusButton22, gpioStatusButton23, gpioStatusButton24, gpioStatusButton25, gpioStatusButton15, gpioStatusButton16, gpioStatusButton1, gpioStatusButton4, gpioStatusButton5, gpioStatusButton6, gpioStatusButton10, gpioStatusButton11, gpioStatusButton26, gpioStatusButton27, gpioStatusButton28, gpioStatusButton29 };
                     var button = (Button)sender;
                     int gpio = Convert.ToInt32(button.Name.Substring(15));
                     Console.WriteLine(gpio);
                     if (button.Text == "INPUT")
+                    {
                         button.Text = "OUTPUT";
+                        eraseData();
+                        dataOut[0] = (byte) gpio;
+                        dataOut[1] = 1;
+                        dataOut[2] = 0;
+                        for (int i = 0; i < 26; i++)
+                        {
+                            if (gpioStatusButtons[i].Name.Substring(16) == button.Name.Substring(15))
+                            {
+                                gpioStatusButtons[i].Text = "LOW";
+                                break;
+                            }
+                        }
+                    }
                     else
+                    {
                         button.Text = "INPUT";
+                        eraseData();
+                        dataOut[0] = (byte)gpio;
+                        dataOut[1] = 0;
+                        dataOut[2] = 0;
+                        for (int i = 0; i < 26; i++)
+                        {
+                            if (gpioStatusButtons[i].Name.Substring(16) == button.Name.Substring(15))
+                            {
+                                gpioStatusButtons[i].Text = "Value: LOW";
+                                break;
+                            }
+                        }
+                    }
                     dataOut[3] = 101;
                     stream.Write(dataOut, 0, dataOut.Length);
                     
@@ -113,6 +201,7 @@ namespace RaspberryControl
         private void mainForm_Load(object sender, EventArgs e)
         {
             setText();
+            setButtons();
             connectButon.Text = "Trying  to  connect...";
             bw.DoWork += bw_DoWork;
             bw.RunWorkerAsync();
@@ -237,6 +326,8 @@ namespace RaspberryControl
             Properties.Settings.Default.ipAdress = ipAddressTextBox.Text;
             Properties.Settings.Default.Save();
 
+            if (!connected)
+                setButtons();
             if (!bw.IsBusy)
                 bw.RunWorkerAsync();
             else
