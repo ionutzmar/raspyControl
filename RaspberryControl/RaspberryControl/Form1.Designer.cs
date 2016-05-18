@@ -189,6 +189,7 @@
             this.gpioStatusButton8.TabIndex = 7;
             this.gpioStatusButton8.Text = "button1";
             this.gpioStatusButton8.UseVisualStyleBackColor = true;
+            this.gpioStatusButton8.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio8
             // 
@@ -217,6 +218,7 @@
             this.gpioStatusButton9.TabIndex = 7;
             this.gpioStatusButton9.Text = "button1";
             this.gpioStatusButton9.UseVisualStyleBackColor = true;
+            this.gpioStatusButton9.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio9
             // 
@@ -245,6 +247,7 @@
             this.gpioStatusButton7.TabIndex = 7;
             this.gpioStatusButton7.Text = "button1";
             this.gpioStatusButton7.UseVisualStyleBackColor = true;
+            this.gpioStatusButton7.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio7
             // 
@@ -273,6 +276,7 @@
             this.gpioStatusButton0.TabIndex = 7;
             this.gpioStatusButton0.Text = "button1";
             this.gpioStatusButton0.UseVisualStyleBackColor = true;
+            this.gpioStatusButton0.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio0
             // 
@@ -301,6 +305,7 @@
             this.gpioStatusButton2.TabIndex = 7;
             this.gpioStatusButton2.Text = "button1";
             this.gpioStatusButton2.UseVisualStyleBackColor = true;
+            this.gpioStatusButton2.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio2
             // 
@@ -329,6 +334,7 @@
             this.gpioStatusButton3.TabIndex = 7;
             this.gpioStatusButton3.Text = "button1";
             this.gpioStatusButton3.UseVisualStyleBackColor = true;
+            this.gpioStatusButton3.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio3
             // 
@@ -357,6 +363,7 @@
             this.gpioStatusButton12.TabIndex = 7;
             this.gpioStatusButton12.Text = "button1";
             this.gpioStatusButton12.UseVisualStyleBackColor = true;
+            this.gpioStatusButton12.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio12
             // 
@@ -385,6 +392,7 @@
             this.gpioStatusButton13.TabIndex = 7;
             this.gpioStatusButton13.Text = "button1";
             this.gpioStatusButton13.UseVisualStyleBackColor = true;
+            this.gpioStatusButton13.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio13
             // 
@@ -413,6 +421,7 @@
             this.gpioStatusButton14.TabIndex = 7;
             this.gpioStatusButton14.Text = "button1";
             this.gpioStatusButton14.UseVisualStyleBackColor = true;
+            this.gpioStatusButton14.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio14
             // 
@@ -441,6 +450,7 @@
             this.gpioStatusButton21.TabIndex = 7;
             this.gpioStatusButton21.Text = "button1";
             this.gpioStatusButton21.UseVisualStyleBackColor = true;
+            this.gpioStatusButton21.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio21
             // 
@@ -469,6 +479,7 @@
             this.gpioStatusButton22.TabIndex = 7;
             this.gpioStatusButton22.Text = "button1";
             this.gpioStatusButton22.UseVisualStyleBackColor = true;
+            this.gpioStatusButton22.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio22
             // 
@@ -497,6 +508,7 @@
             this.gpioStatusButton23.TabIndex = 7;
             this.gpioStatusButton23.Text = "button1";
             this.gpioStatusButton23.UseVisualStyleBackColor = true;
+            this.gpioStatusButton23.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio23
             // 
@@ -525,6 +537,7 @@
             this.gpioStatusButton24.TabIndex = 7;
             this.gpioStatusButton24.Text = "button1";
             this.gpioStatusButton24.UseVisualStyleBackColor = true;
+            this.gpioStatusButton24.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio24
             // 
@@ -553,6 +566,7 @@
             this.gpioStatusButton25.TabIndex = 7;
             this.gpioStatusButton25.Text = "button1";
             this.gpioStatusButton25.UseVisualStyleBackColor = true;
+            this.gpioStatusButton25.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio25
             // 
@@ -581,6 +595,7 @@
             this.gpioStatusButton29.TabIndex = 7;
             this.gpioStatusButton29.Text = "button1";
             this.gpioStatusButton29.UseVisualStyleBackColor = true;
+            this.gpioStatusButton29.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio29
             // 
@@ -609,6 +624,7 @@
             this.gpioStatusButton28.TabIndex = 7;
             this.gpioStatusButton28.Text = "button1";
             this.gpioStatusButton28.UseVisualStyleBackColor = true;
+            this.gpioStatusButton28.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio28
             // 
@@ -637,6 +653,7 @@
             this.gpioStatusButton27.TabIndex = 7;
             this.gpioStatusButton27.Text = "button1";
             this.gpioStatusButton27.UseVisualStyleBackColor = true;
+            this.gpioStatusButton27.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio27
             // 
@@ -665,6 +682,7 @@
             this.gpioStatusButton26.TabIndex = 7;
             this.gpioStatusButton26.Text = "button1";
             this.gpioStatusButton26.UseVisualStyleBackColor = true;
+            this.gpioStatusButton26.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio26
             // 
@@ -693,6 +711,7 @@
             this.gpioStatusButton11.TabIndex = 7;
             this.gpioStatusButton11.Text = "button1";
             this.gpioStatusButton11.UseVisualStyleBackColor = true;
+            this.gpioStatusButton11.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio11
             // 
@@ -721,6 +740,7 @@
             this.gpioStatusButton10.TabIndex = 7;
             this.gpioStatusButton10.Text = "button1";
             this.gpioStatusButton10.UseVisualStyleBackColor = true;
+            this.gpioStatusButton10.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio10
             // 
@@ -749,6 +769,7 @@
             this.gpioStatusButton6.TabIndex = 7;
             this.gpioStatusButton6.Text = "button1";
             this.gpioStatusButton6.UseVisualStyleBackColor = true;
+            this.gpioStatusButton6.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio6
             // 
@@ -777,6 +798,7 @@
             this.gpioStatusButton5.TabIndex = 7;
             this.gpioStatusButton5.Text = "button1";
             this.gpioStatusButton5.UseVisualStyleBackColor = true;
+            this.gpioStatusButton5.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio5
             // 
@@ -805,6 +827,7 @@
             this.gpioStatusButton4.TabIndex = 7;
             this.gpioStatusButton4.Text = "button1";
             this.gpioStatusButton4.UseVisualStyleBackColor = true;
+            this.gpioStatusButton4.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio4
             // 
@@ -833,6 +856,7 @@
             this.gpioStatusButton1.TabIndex = 7;
             this.gpioStatusButton1.Text = "button1";
             this.gpioStatusButton1.UseVisualStyleBackColor = true;
+            this.gpioStatusButton1.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio1
             // 
@@ -861,6 +885,7 @@
             this.gpioStatusButton16.TabIndex = 7;
             this.gpioStatusButton16.Text = "button1";
             this.gpioStatusButton16.UseVisualStyleBackColor = true;
+            this.gpioStatusButton16.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio16
             // 
@@ -889,6 +914,7 @@
             this.gpioStatusButton15.TabIndex = 7;
             this.gpioStatusButton15.Text = "button1";
             this.gpioStatusButton15.UseVisualStyleBackColor = true;
+            this.gpioStatusButton15.Click += new System.EventHandler(this.gpioStatusPressed);
             // 
             // inOutButtonGpio15
             // 
