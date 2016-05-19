@@ -1032,9 +1032,10 @@
             this.Controls.Add(this.ipAddressLabel);
             this.Controls.Add(this.ipAddressTextBox);
             this.Controls.Add(this.panelul);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 650);
             this.Name = "mainForm";
-            this.Text = "Form1";
+            this.Text = "RaspyControl";
             this.Load += new System.EventHandler(this.mainForm_Load);
             this.SizeChanged += new System.EventHandler(this.mainForm_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.gpioImage)).EndInit();
