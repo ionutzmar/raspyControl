@@ -18,8 +18,10 @@ namespace RaspberryControl
         int port = 8887;
         NetworkStream stream;
         BackgroundWorker bw = new BackgroundWorker();
+        BackgroundWorker readFromServerBw = new BackgroundWorker();
         bool connected = false;
         byte[] dataOut = new byte[4];
+        byte[] dataIn = new byte[4];
         
 
         public mainForm()
@@ -27,7 +29,43 @@ namespace RaspberryControl
             InitializeComponent();
         }
 
-        void bw_DoWork(object sender, DoWorkEventArgs e)
+
+        private void readFromServer_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Button[] gpioStatusButtons = new Button[] { gpioStatusButton8, gpioStatusButton9, gpioStatusButton7, gpioStatusButton0, gpioStatusButton2, gpioStatusButton3, gpioStatusButton12, gpioStatusButton13, gpioStatusButton14, gpioStatusButton21, gpioStatusButton22, gpioStatusButton23, gpioStatusButton24, gpioStatusButton25, gpioStatusButton15, gpioStatusButton16, gpioStatusButton1, gpioStatusButton4, gpioStatusButton5, gpioStatusButton6, gpioStatusButton10, gpioStatusButton11, gpioStatusButton26, gpioStatusButton27, gpioStatusButton28, gpioStatusButton29 };
+            while (true)
+            {
+                if (stream == null)
+                    continue;
+                if(connected)
+                {
+                    if (!stream.DataAvailable)
+                        continue;
+                    stream.Read(dataIn, 0, dataIn.Length);
+                    int i;
+                    for (i = 0; i < 26; i++)
+                    {
+                        if (Convert.ToByte(gpioStatusButtons[i].Name.Substring(16)) == dataIn[0])
+                            break;
+                    }
+                    setInputValue(i, dataIn[2]);
+                }
+            }
+        }
+
+        private void setInputValue(int index, int value)
+        {
+            Button[] gpioStatusButtons = new Button[] { gpioStatusButton8, gpioStatusButton9, gpioStatusButton7, gpioStatusButton0, gpioStatusButton2, gpioStatusButton3, gpioStatusButton12, gpioStatusButton13, gpioStatusButton14, gpioStatusButton21, gpioStatusButton22, gpioStatusButton23, gpioStatusButton24, gpioStatusButton25, gpioStatusButton15, gpioStatusButton16, gpioStatusButton1, gpioStatusButton4, gpioStatusButton5, gpioStatusButton6, gpioStatusButton10, gpioStatusButton11, gpioStatusButton26, gpioStatusButton27, gpioStatusButton28, gpioStatusButton29 };
+
+            if (gpioStatusButtons[index].InvokeRequired)
+            {
+                gpioStatusButtons[index].Invoke((Action)delegate { setInputValue(index, value); });
+                return;
+            }
+            gpioStatusButtons[index].Text = (value == 1) ? "Value: HIGH" : "Value: LOW";
+        }
+
+        private void bw_DoWork(object sender, DoWorkEventArgs e)
         {
             try
             {
@@ -40,9 +78,9 @@ namespace RaspberryControl
                 }
                 else
                 {
+                    connected = false;
                     client.Close();
                     stream.Close();
-                    connected = false;
                     setText();
                 }
             }
@@ -205,7 +243,9 @@ namespace RaspberryControl
             connectButon.Text = "Trying  to  connect...";
             bw.DoWork += bw_DoWork;
             bw.RunWorkerAsync();
-      
+            readFromServerBw.DoWork += readFromServer_DoWork;
+            readFromServerBw.RunWorkerAsync();
+
             ipAddressTextBox.Text = Properties.Settings.Default.ipAdress;
 
             mainForm_SizeChanged(sender, e);
