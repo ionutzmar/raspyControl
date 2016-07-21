@@ -11,26 +11,28 @@ using System.Net.Sockets;
 
 namespace RaspberryControl
 {
-    public partial class mainForm : Form
+    
+    public partial class controlForm : Form
     {
+        
 
         TcpClient client;
         int port = 8887;
         NetworkStream stream;
-        BackgroundWorker bw = new BackgroundWorker();
-        BackgroundWorker readFromServerBw = new BackgroundWorker();
-        bool connected = false;
+        internal BackgroundWorker bw = new BackgroundWorker();
+        internal BackgroundWorker readFromServerBw = new BackgroundWorker();
+        internal bool connected = false;
         byte[] dataOut = new byte[4];
         byte[] dataIn = new byte[4];
-        
+        authForm settingsForm;
 
-        public mainForm()
+        public controlForm()
         {
             InitializeComponent();
         }
 
 
-        private void readFromServer_DoWork(object sender, DoWorkEventArgs e)
+        internal void readFromServer_DoWork(object sender, DoWorkEventArgs e)
         {
             Button[] gpioStatusButtons = new Button[] { gpioStatusButton8, gpioStatusButton9, gpioStatusButton7, gpioStatusButton0, gpioStatusButton2, gpioStatusButton3, gpioStatusButton12, gpioStatusButton13, gpioStatusButton14, gpioStatusButton21, gpioStatusButton22, gpioStatusButton23, gpioStatusButton24, gpioStatusButton25, gpioStatusButton15, gpioStatusButton16, gpioStatusButton1, gpioStatusButton4, gpioStatusButton5, gpioStatusButton6, gpioStatusButton10, gpioStatusButton11, gpioStatusButton26, gpioStatusButton27, gpioStatusButton28, gpioStatusButton29 };
             while (true)
@@ -53,19 +55,19 @@ namespace RaspberryControl
             }
         }
 
-        private void setInputValue(int index, int value)
+        void closeForm(Form formToClose)
         {
-            Button[] gpioStatusButtons = new Button[] { gpioStatusButton8, gpioStatusButton9, gpioStatusButton7, gpioStatusButton0, gpioStatusButton2, gpioStatusButton3, gpioStatusButton12, gpioStatusButton13, gpioStatusButton14, gpioStatusButton21, gpioStatusButton22, gpioStatusButton23, gpioStatusButton24, gpioStatusButton25, gpioStatusButton15, gpioStatusButton16, gpioStatusButton1, gpioStatusButton4, gpioStatusButton5, gpioStatusButton6, gpioStatusButton10, gpioStatusButton11, gpioStatusButton26, gpioStatusButton27, gpioStatusButton28, gpioStatusButton29 };
-
-            if (gpioStatusButtons[index].InvokeRequired)
+            if (formToClose == null)
+                return;
+            if(formToClose.InvokeRequired)
             {
-                gpioStatusButtons[index].Invoke((Action)delegate { setInputValue(index, value); });
+                formToClose.Invoke((Action)delegate { closeForm(formToClose); });
                 return;
             }
-            gpioStatusButtons[index].Text = (value == 1) ? "Value: HIGH" : "Value: LOW";
+            formToClose.Close();
         }
 
-        private void bw_DoWork(object sender, DoWorkEventArgs e)
+        internal void bw_DoWork(object sender, DoWorkEventArgs e)
         {
             try
             {
@@ -74,7 +76,10 @@ namespace RaspberryControl
                     client = new TcpClient(Properties.Settings.Default.ipAdress, port);
                     stream = client.GetStream();
                     connected = true;
+                    settingsForm.Close();
                     setText();
+                    if (settingsForm != null)
+                        closeForm(settingsForm);
                 }
                 else
                 {
@@ -88,11 +93,24 @@ namespace RaspberryControl
             {
                 connected = false;
                 setText();
+                if (settingsForm != null)
+                    settingsForm.setLoginButtonText("LOGIN");
                 MessageBox.Show("Something went wrong: " + ext.Message);
-
             }
         }
-      
+
+        private void setInputValue(int index, int value)
+        {
+            Button[] gpioStatusButtons = new Button[] { gpioStatusButton8, gpioStatusButton9, gpioStatusButton7, gpioStatusButton0, gpioStatusButton2, gpioStatusButton3, gpioStatusButton12, gpioStatusButton13, gpioStatusButton14, gpioStatusButton21, gpioStatusButton22, gpioStatusButton23, gpioStatusButton24, gpioStatusButton25, gpioStatusButton15, gpioStatusButton16, gpioStatusButton1, gpioStatusButton4, gpioStatusButton5, gpioStatusButton6, gpioStatusButton10, gpioStatusButton11, gpioStatusButton26, gpioStatusButton27, gpioStatusButton28, gpioStatusButton29 };
+
+            if (gpioStatusButtons[index].InvokeRequired)
+            {
+                gpioStatusButtons[index].Invoke((Action)delegate { setInputValue(index, value); });
+                return;
+            }
+            gpioStatusButtons[index].Text = (value == 1) ? "Value: HIGH" : "Value: LOW";
+        }
+
         private void setText()
         {
             if(connectButon.InvokeRequired)
@@ -119,7 +137,7 @@ namespace RaspberryControl
             
         }
 
-        void setButtons()
+        internal void setButtons()
         {
             Button[] inOutButtons = new Button[]{inOutButtonGpio8, inOutButtonGpio9, inOutButtonGpio7, inOutButtonGpio0, inOutButtonGpio2, inOutButtonGpio3, inOutButtonGpio12, inOutButtonGpio13, inOutButtonGpio14, inOutButtonGpio21, inOutButtonGpio22, inOutButtonGpio23, inOutButtonGpio24, inOutButtonGpio25, inOutButtonGpio15, inOutButtonGpio16, inOutButtonGpio1, inOutButtonGpio4, inOutButtonGpio5, inOutButtonGpio6, inOutButtonGpio10, inOutButtonGpio11, inOutButtonGpio26, inOutButtonGpio27, inOutButtonGpio28, inOutButtonGpio29};
             Button[] gpioStatusButtons = new Button[] { gpioStatusButton8, gpioStatusButton9, gpioStatusButton7, gpioStatusButton0, gpioStatusButton2, gpioStatusButton3, gpioStatusButton12, gpioStatusButton13, gpioStatusButton14, gpioStatusButton21, gpioStatusButton22, gpioStatusButton23, gpioStatusButton24, gpioStatusButton25, gpioStatusButton15, gpioStatusButton16, gpioStatusButton1, gpioStatusButton4, gpioStatusButton5, gpioStatusButton6, gpioStatusButton10, gpioStatusButton11, gpioStatusButton26, gpioStatusButton27, gpioStatusButton28, gpioStatusButton29};
@@ -247,15 +265,18 @@ namespace RaspberryControl
 
         private void mainForm_Load(object sender, EventArgs e)
         {
+            bw.DoWork += bw_DoWork;
             setText();
             setButtons();
             connectButon.Text = "Trying  to  connect...";
-            bw.DoWork += bw_DoWork;
-            bw.RunWorkerAsync();
+            
             readFromServerBw.DoWork += readFromServer_DoWork;
             readFromServerBw.RunWorkerAsync();
 
             ipAddressTextBox.Text = Properties.Settings.Default.ipAdress;
+
+            settingsForm = new authForm(this);
+            settingsForm.ShowDialog();
 
             mainForm_SizeChanged(sender, e);
 

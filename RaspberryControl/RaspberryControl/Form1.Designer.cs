@@ -1,6 +1,6 @@
 ﻿namespace RaspberryControl
 {
-    partial class mainForm
+    partial class controlForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(controlForm));
             this.gpioImage = new System.Windows.Forms.PictureBox();
             this.ipAddressTextBox = new System.Windows.Forms.TextBox();
             this.ipAddressLabel = new System.Windows.Forms.Label();
@@ -135,10 +135,12 @@
             // ipAddressTextBox
             // 
             this.ipAddressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ipAddressTextBox.Enabled = false;
             this.ipAddressTextBox.Location = new System.Drawing.Point(895, 55);
             this.ipAddressTextBox.Name = "ipAddressTextBox";
             this.ipAddressTextBox.Size = new System.Drawing.Size(100, 20);
             this.ipAddressTextBox.TabIndex = 2;
+            this.ipAddressTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ipAddressLabel
             // 
@@ -1021,7 +1023,7 @@
             this.panelul.Size = new System.Drawing.Size(646, 516);
             this.panelul.TabIndex = 10;
             // 
-            // mainForm
+            // controlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1034,7 +1036,7 @@
             this.Controls.Add(this.panelul);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 650);
-            this.Name = "mainForm";
+            this.Name = "controlForm";
             this.Text = "RaspyControl";
             this.Load += new System.EventHandler(this.mainForm_Load);
             this.SizeChanged += new System.EventHandler(this.mainForm_SizeChanged);
