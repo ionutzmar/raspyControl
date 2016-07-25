@@ -8,29 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Sockets;
+using System.Security.Cryptography;
 
 namespace RaspberryControl
 {
-    
     public partial class controlForm : Form
     {
-        
-
         TcpClient client;
         int port = 8887;
         NetworkStream stream;
         internal BackgroundWorker bw = new BackgroundWorker();
         internal BackgroundWorker readFromServerBw = new BackgroundWorker();
         internal bool connected = false;
-        byte[] dataOut = new byte[4];
-        byte[] dataIn = new byte[4];
+        byte[] dataOut = new byte[sizeof(int) * constants.buffersize];
+        byte[] dataIn = new byte[sizeof(int) * constants.buffersize];
+        int[] intIn = new int[constants.buffersize];
+        int[] intOut = new int[constants.buffersize];
         authForm settingsForm;
+        internal string password;
 
         public controlForm()
         {
             InitializeComponent();
         }
-
 
         internal void readFromServer_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -75,9 +75,18 @@ namespace RaspberryControl
                 {
                     client = new TcpClient(Properties.Settings.Default.ipAdress, port);
                     stream = client.GetStream();
+                    stream.Read(dataIn, 0, dataIn.Length);
+               
+                    for(int i = 0; i < constants.buffersize; i++)
+                        intIn[i] = BitConverter.ToInt32(dataIn, i * sizeof(int));
+                    if (intIn[0] != constants.signature && intIn[3] != constants.signature)
+                        ;
+
+                    
                     connected = true;
-                    settingsForm.Close();
                     setText();
+                    if(!readFromServerBw.IsBusy)
+                        readFromServerBw.RunWorkerAsync();
                     if (settingsForm != null)
                         closeForm(settingsForm);
                 }
@@ -91,6 +100,10 @@ namespace RaspberryControl
             }
             catch (Exception ext)
             {
+                if (client != null)
+                    client.Close();
+                if (stream != null)
+                    stream.Close();
                 connected = false;
                 setText();
                 if (settingsForm != null)
@@ -403,5 +416,10 @@ namespace RaspberryControl
             else
                 MessageBox.Show("Try again in a few seconds!");
         }
+    }
+    public class constants
+    {
+        internal const int buffersize = 16;
+        internal const int signature = 5678;
     }
 }

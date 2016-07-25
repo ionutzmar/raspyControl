@@ -40,14 +40,14 @@ namespace RaspberryControl
                 Properties.Settings.Default.password = "";
             Properties.Settings.Default.Save();
 
+            mainForm.password = passwordTextBox.Text;
 
             if (!mainForm.connected)
                 mainForm.setButtons();
             if (!mainForm.bw.IsBusy)
                 mainForm.bw.RunWorkerAsync();
             else
-                MessageBox.Show("Try again in a few seconds!");
-
+                MessageBox.Show("Try again in a few seconds!");        
         }
 
         internal void setLoginButtonText(string text)
