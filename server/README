@@ -1,0 +1,5 @@
+Valid commands:
+
+1) ./rpicontrol.out                             //starts the server
+2) ./rpicontrol.out setuser user                //if one user already exists when you create a user, the other is overwritten
+3) ./rpicontrol.out removeuser                  //no user remains
