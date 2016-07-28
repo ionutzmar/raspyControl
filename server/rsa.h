@@ -18,4 +18,7 @@ int encrypt(int toEncrypt, long long n, long long e);
 
 int decrypt(int toDecrypt); // You have to run rsaInitialise() before using it.
 
+void decryptBuffer(int*, int length);
+void decryptBufferToChar(int*, int length, char*);
+
 #endif //RSA_H

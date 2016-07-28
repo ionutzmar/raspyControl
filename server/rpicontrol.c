@@ -114,7 +114,9 @@ reconnect:
     getPublicKey(&n, &e);
     int bufferIn[BUFFERSIZE];
     int bufferOut[BUFFERSIZE];
+    char charBuf[BUFFERSIZE];
 
+    bzero(charBuf, BUFFERSIZE * sizeof(char));
     bzero(bufferIn, BUFFERSIZE * sizeof(int));
     bzero(bufferOut, BUFFERSIZE * sizeof(int));
 
@@ -125,9 +127,47 @@ reconnect:
 
     write(clientsockfd, bufferOut, 4 * sizeof(int));
 
-
-    while(read(clientsockfd,  bufferIn, 4) > 0)
+    if(read(clientsockfd,  bufferIn, BUFFERSIZE * sizeof(int)) < 1) // read the username
     {
+        printf("Client disconnected! Waiting for a new one...\n");
+        close(clientsockfd);
+        goto reconnect;
+    }
+    decryptBufferToChar(bufferIn, BUFFERSIZE, charBuf);
+    int sw = verifyUser(charBuf);
+
+    if(read(clientsockfd,  bufferIn, BUFFERSIZE * sizeof(int)) < 1) //read the password
+    {
+        printf("Client disconnected! Waiting for a new one...\n");
+        close(clientsockfd);
+        goto reconnect;
+    }
+    decryptBufferToChar(bufferIn, BUFFERSIZE, charBuf);
+    if(!sw || !verifyPassword(charBuf))
+    {
+        bzero(bufferOut, BUFFERSIZE * sizeof(int));
+        bufferOut[0] = SIGNATURE;
+        bufferOut[1] = 0;
+        bufferOut[2] = 0;
+        bufferOut[3] = SIGNATURE;
+        write(clientsockfd, bufferOut, 4 * sizeof(int));
+        printf("%s\n", "Wrong username or password!");
+        goto reconnect;
+    }
+
+    bzero(bufferOut, BUFFERSIZE * sizeof(int));
+    bufferOut[0] = SIGNATURE;
+    bufferOut[1] = 1;
+    bufferOut[2] = 1;
+    bufferOut[3] = SIGNATURE;
+    write(clientsockfd, bufferOut, 4 * sizeof(int));
+
+    while(read(clientsockfd,  bufferIn, BUFFERSIZE * sizeof(int)) > 0)
+    {
+        int j;
+        for(j = 0; j < BUFFERSIZE; j++)
+            printf("%d \n", bufferIn[j]);
+        printf("\n");
         //if(buffer[3] != 100)
         //{
         //    printf("Warning! Someone else is trying to control your raspberry!!\n");

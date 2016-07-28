@@ -168,3 +168,17 @@ void rsaInitialise()
     setE();
     d = modInverse(e, m);
 }
+
+void decryptBuffer(int* buffer, int length)
+{
+    int i;
+    for(i = 0; i < length; i++)
+        buffer[i] = decrypt(buffer[i]);
+}
+
+void decryptBufferToChar(int* buffer, int length, char* charBuf)
+{
+    int i;
+    for(i = 0; i < length; i++)
+        charBuf[i] = decrypt(buffer[i]);
+}

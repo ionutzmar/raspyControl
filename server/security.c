@@ -18,6 +18,31 @@ char* sha512(const char* toHash)
     return crypt(toHash, "$6$");
 }
 
+int verifyUser(char* user)
+{
+    FILE* file = fopen("users", "r");
+    if(file == NULL)
+        error("Could not read the users database file");
+    char usr[MAXLENGTH]; //the user in the file
+    fscanf(file, "%s", usr);
+    fclose(file);
+    return (strcmp(usr, user) != 0) ? 0 : 1;
+}
+
+int verifyPassword(char* password)
+{
+    FILE* file = fopen("users", "r");
+    if(file == NULL)
+        error("Could not read the users database file");
+    char pass[87];
+    fscanf(file, "%s", pass);
+    fscanf(file, "%s", pass);
+    printf("%s\n", "ajunge");
+    //if(fclose(file))
+        //error("Could not close file");
+    printf("%s\n", "ajunge");
+    return (strcmp(pass, sha512(password)) != 0 ? 0 : 1);
+}
 void setuser(char* user)
 {
     if(strlen(user) > MAXLENGTH)
@@ -28,7 +53,7 @@ void setuser(char* user)
     printf("Now type a password less than %d characters: ", MAXLENGTH);
     char* password = getpass("");
     if(password == NULL)
-        error("Could not read the password: ");
+        error("Could not read the password");
     if(strlen(password) > MAXLENGTH - 1)
     {
         fprintf(stderr, "%s\n", "Password too long.");
@@ -38,12 +63,12 @@ void setuser(char* user)
     strcpy(sw, password);
     password = getpass("Now retype your password: ");
     if(password == NULL)
-        error("Could not read the password: ");
+        error("Could not read the password");
     if(!strcmp(password, sw))
     {
         FILE* file = fopen("users", "w");
         if(file == NULL)
-            error("Could not create the users database file: ");
+            error("Could not create the users database file");
 
         fprintf(file, "%s\n", user);
         fprintf(file, "%s\n", sha512(password));
@@ -65,7 +90,7 @@ void removeuser(void)
 {
     FILE* file = fopen("users", "w");
     if(file == NULL)
-        error("Could not delete the users database file: ");
+        error("Could not delete the users database file");
     fclose(file);
     printf("The user is deleted!\n");
     exit(EXIT_SUCCESS);
