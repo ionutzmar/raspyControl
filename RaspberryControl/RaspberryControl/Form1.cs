@@ -26,6 +26,7 @@ namespace RaspberryControl
         int[] intOut = new int[constants.buffersize];
         authForm settingsForm;
         internal string password;
+        int nrsa, ersa; //used for RSA algorithm;
 
         public controlForm()
         {
@@ -67,6 +68,49 @@ namespace RaspberryControl
             formToClose.Close();
         }
 
+        private void intToBytes(int data, byte[] array, int offset)
+        {
+            data = encrypt(data, nrsa, ersa);
+            array[0 + offset] = (byte)(data);
+            array[1 + offset] = (byte)(data >> 8);
+            array[2 + offset] = (byte)(data >> 16);
+            array[3 + offset] = (byte)(data >> 24);
+        }
+
+        private void streamWriteString(string str)
+        {
+            eraseIntData();
+            byte[] sw = Encoding.ASCII.GetBytes(str);
+            for (int i = 0; i < constants.buffersize && i < sw.Length; i++)
+                intOut[i] = sw[i];
+
+            for (int i = 0; i < constants.buffersize; i++)
+                intToBytes(intOut[i], dataOut, i * sizeof(int));
+            stream.Write(dataOut, 0, dataOut.Length);
+        }
+
+        long power(long baza, long expo, long modulo)
+        {
+            long result = 1;
+            while (expo != 0)
+            {
+                if ((expo & 1) != 0)
+                {
+                    result *= baza;
+                    result = result % modulo;
+                }
+                expo >>= 1;
+                baza *= baza;
+                baza = baza % modulo;
+            }
+
+            return result;
+        }
+
+        int encrypt(int toEncrypt, long n, long e)
+        {
+            return (int) power(toEncrypt, e, n);
+        }
         internal void bw_DoWork(object sender, DoWorkEventArgs e)
         {
             try
@@ -80,16 +124,47 @@ namespace RaspberryControl
                     for(int i = 0; i < constants.buffersize; i++)
                         intIn[i] = BitConverter.ToInt32(dataIn, i * sizeof(int));
                     if (intIn[0] != constants.signature && intIn[3] != constants.signature)
-                        ;
-
+                    {
+                        client.Close();
+                        stream.Close();
+                        return;
+                    }
                     
+                    nrsa = intIn[1];
+                    ersa = intIn[2];
+
+                    streamWriteString(Properties.Settings.Default.username);
+                    streamWriteString(password);
+
+                    stream.Read(dataIn, 0, dataIn.Length);
+                    for (int i = 0; i < constants.buffersize; i++)
+                        intIn[i] = BitConverter.ToInt32(dataIn, i * sizeof(int));
+                    if (intIn[0] != constants.signature && intIn[3] != constants.signature)
+                    {
+                        client.Close();
+                        stream.Close();
+                        return;
+                    }
+                    if(intIn[1] == 0 && intIn[2] == 0)
+                    {
+                        MessageBox.Show("Username or password is incorrect");
+                        client.Close();
+                        stream.Close();
+                        return;
+                    }
+
+
+
                     connected = true;
                     setText();
-                    if(!readFromServerBw.IsBusy)
+                    if (!readFromServerBw.IsBusy)
                         readFromServerBw.RunWorkerAsync();
                     if (settingsForm != null)
                         closeForm(settingsForm);
                 }
+                    
+                    
+                
                 else
                 {
                     connected = false;
@@ -164,8 +239,13 @@ namespace RaspberryControl
 
         private void eraseData()
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < constants.buffersize * sizeof(int); i++)
                 dataOut[i] = 0;
+        }
+        private void eraseIntData()
+        {
+            for (int i = 0; i < constants.buffersize; i++)
+                intOut[i] = 0;
         }
 
         private void gpioStatusPressed(object sender, EventArgs e)
