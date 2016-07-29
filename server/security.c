@@ -34,12 +34,12 @@ int verifyPassword(char* password)
     FILE* file = fopen("users", "r");
     if(file == NULL)
         error("Could not read the users database file");
-    char pass[87];
+    char pass[95];
     fscanf(file, "%s", pass);
     fscanf(file, "%s", pass);
     printf("%s\n", "ajunge");
-    //if(fclose(file))
-        //error("Could not close file");
+    if(fclose(file))
+        error("Could not close file");
     printf("%s\n", "ajunge");
     return (strcmp(pass, sha512(password)) != 0 ? 0 : 1);
 }
