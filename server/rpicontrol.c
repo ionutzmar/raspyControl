@@ -164,28 +164,23 @@ reconnect:
 
     while(read(clientsockfd,  bufferIn, BUFFERSIZE * sizeof(int)) > 0)
     {
+        decryptBuffer(bufferIn, BUFFERSIZE);
         int j;
         for(j = 0; j < BUFFERSIZE; j++)
             printf("%d \n", bufferIn[j]);
         printf("\n");
-        //if(buffer[3] != 100)
-        //{
-        //    printf("Warning! Someone else is trying to control your raspberry!!\n");
-        //    close(clientsockfd);
-        //    close(sockfd);
-        //    return 0;
-        //}
-	pinMode(bufferIn[0], bufferIn[1]);
+
+        pinMode(bufferIn[0], bufferIn[1]);
         if(bufferIn[1])
             digitalWrite(bufferIn[0], bufferIn[2]);
-	else
-	{
-	    bzero(bufferOut, 4);
-	    bufferOut[0] = bufferIn[0];
-	    bufferOut[2] = digitalRead(bufferIn[0]);
-	    bufferOut[3] = 102;
-	    write(clientsockfd, bufferOut, 4);
-	}
+	    else
+	    {
+            bzero(bufferOut, BUFFERSIZE * sizeof(int));
+            bufferOut[0] = bufferIn[0];
+            bufferOut[2] = digitalRead(bufferIn[0]);
+            bufferOut[3] = 101;
+            write(clientsockfd, bufferOut, BUFFERSIZE * sizeof(int));
+	    }
         int i;
         for(i = 0; i < 4 ; i++)
         {
