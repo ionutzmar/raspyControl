@@ -37,10 +37,8 @@ int verifyPassword(char* password)
     char pass[95];
     fscanf(file, "%s", pass);
     fscanf(file, "%s", pass);
-    printf("%s\n", "ajunge");
     if(fclose(file))
         error("Could not close file");
-    printf("%s\n", "ajunge");
     return (strcmp(pass, sha512(password)) != 0 ? 0 : 1);
 }
 void setuser(char* user)
