@@ -8,29 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Sockets;
+using System.Security.Cryptography;
 
 namespace RaspberryControl
 {
-    
     public partial class controlForm : Form
     {
-        
-
         TcpClient client;
         int port = 8887;
         NetworkStream stream;
         internal BackgroundWorker bw = new BackgroundWorker();
         internal BackgroundWorker readFromServerBw = new BackgroundWorker();
         internal bool connected = false;
-        byte[] dataOut = new byte[4];
-        byte[] dataIn = new byte[4];
+        byte[] dataOut = new byte[sizeof(int) * constants.buffersize];
+        byte[] dataIn = new byte[sizeof(int) * constants.buffersize];
+        int[] intIn = new int[constants.buffersize];
+        int[] intOut = new int[constants.buffersize];
         authForm settingsForm;
+        internal string password;
+        int nrsa, ersa; //used for RSA algorithm;
 
         public controlForm()
         {
             InitializeComponent();
         }
-
 
         internal void readFromServer_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -44,13 +45,17 @@ namespace RaspberryControl
                     if (!stream.DataAvailable)
                         continue;
                     stream.Read(dataIn, 0, dataIn.Length);
+                    for (int j = 0; j < constants.buffersize; j++)
+                        intIn[j] = BitConverter.ToInt32(dataIn, j * sizeof(int));
+
                     int i;
                     for (i = 0; i < 26; i++)
                     {
-                        if (Convert.ToByte(gpioStatusButtons[i].Name.Substring(16)) == dataIn[0])
+                        if (Convert.ToByte(gpioStatusButtons[i].Name.Substring(16)) == intIn[0])
                             break;
                     }
-                    setInputValue(i, dataIn[2]);
+
+                    setInputValue(i, intIn[2]);
                 }
             }
         }
@@ -67,6 +72,61 @@ namespace RaspberryControl
             formToClose.Close();
         }
 
+        private void intToBytes(int data, byte[] array, int offset)
+        {
+            data = encrypt(data, nrsa, ersa);
+            array[0 + offset] = (byte)(data);
+            array[1 + offset] = (byte)(data >> 8);
+            array[2 + offset] = (byte)(data >> 16);
+            array[3 + offset] = (byte)(data >> 24);
+        }
+
+        private void streamWriteString(string str)
+        {
+            eraseIntData();
+            byte[] sw = Encoding.ASCII.GetBytes(str);
+            for (int i = 0; i < constants.buffersize && i < sw.Length; i++)
+                intOut[i] = sw[i];
+
+            for (int i = 0; i < constants.buffersize; i++)
+                intToBytes(intOut[i], dataOut, i * sizeof(int));
+            stream.Write(dataOut, 0, dataOut.Length);
+        }
+        private void streamWritingBytes(byte[] data)
+        {
+            byte[] sw = new byte[constants.buffersize * sizeof(int)];
+            for (int i = 0; i < constants.buffersize * sizeof(int); i++)
+                sw[i] = dataOut[i];
+            for (int i = 0; i < constants.buffersize && i < sw.Length; i++)
+                intOut[i] = sw[i];
+            for (int i = 0; i < constants.buffersize; i++)
+                intToBytes(intOut[i], dataOut, i * sizeof(int));
+            stream.Write(dataOut, 0, dataOut.Length);
+
+        }
+
+        long power(long baza, long expo, long modulo)
+        {
+            long result = 1;
+            while (expo != 0)
+            {
+                if ((expo & 1) != 0)
+                {
+                    result *= baza;
+                    result = result % modulo;
+                }
+                expo >>= 1;
+                baza *= baza;
+                baza = baza % modulo;
+            }
+
+            return result;
+        }
+
+        int encrypt(int toEncrypt, long n, long e)
+        {
+            return (int) power(toEncrypt, e, n);
+        }
         internal void bw_DoWork(object sender, DoWorkEventArgs e)
         {
             try
@@ -75,12 +135,58 @@ namespace RaspberryControl
                 {
                     client = new TcpClient(Properties.Settings.Default.ipAdress, port);
                     stream = client.GetStream();
+                    stream.Read(dataIn, 0, dataIn.Length);
+               
+                    for(int i = 0; i < constants.buffersize; i++)
+                        intIn[i] = BitConverter.ToInt32(dataIn, i * sizeof(int));
+                    if (intIn[0] != constants.signature && intIn[3] != constants.signature)
+                    {
+                        client.Close();
+                        stream.Close();
+                        if (settingsForm != null)
+                            settingsForm.setLoginButtonText("LOGIN");
+                        return;
+                    }
+                    
+                    nrsa = intIn[1];
+                    ersa = intIn[2];
+
+                    streamWriteString(Properties.Settings.Default.username);
+                    streamWriteString(password);
+
+                    stream.Read(dataIn, 0, dataIn.Length);
+                    for (int i = 0; i < constants.buffersize; i++)
+                        intIn[i] = BitConverter.ToInt32(dataIn, i * sizeof(int));
+                    if (intIn[0] != constants.signature && intIn[3] != constants.signature)
+                    {
+                        client.Close();
+                        stream.Close();
+                        if (settingsForm != null)
+                            settingsForm.setLoginButtonText("LOGIN");
+                        return;
+                    }
+                    if(intIn[1] == 0 && intIn[2] == 0)
+                    {
+                        MessageBox.Show("Username or password is incorrect");
+                        client.Close();
+                        stream.Close();
+                        if (settingsForm != null)
+                            settingsForm.setLoginButtonText("LOGIN");
+                        return;
+                    }
+
+
+
                     connected = true;
-                    settingsForm.Close();
                     setText();
+                    if (!readFromServerBw.IsBusy)
+                        readFromServerBw.RunWorkerAsync();
                     if (settingsForm != null)
                         closeForm(settingsForm);
                 }
+                    
+                    
+                
                 else
                 {
                     connected = false;
@@ -91,6 +197,10 @@ namespace RaspberryControl
             }
             catch (Exception ext)
             {
+                if (client != null)
+                    client.Close();
+                if (stream != null)
+                    stream.Close();
                 connected = false;
                 setText();
                 if (settingsForm != null)
@@ -151,8 +261,13 @@ namespace RaspberryControl
 
         private void eraseData()
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < constants.buffersize * sizeof(int); i++)
                 dataOut[i] = 0;
+        }
+        private void eraseIntData()
+        {
+            for (int i = 0; i < constants.buffersize; i++)
+                intOut[i] = 0;
         }
 
         private void gpioStatusPressed(object sender, EventArgs e)
@@ -197,7 +312,7 @@ namespace RaspberryControl
                 }
 
                 dataOut[3] = 101;
-                stream.Write(dataOut, 0, dataOut.Length);
+                streamWritingBytes(dataOut);
             }
             catch (Exception ext) //it catches the  second click...
             {
@@ -215,11 +330,10 @@ namespace RaspberryControl
                     Button[] gpioStatusButtons = new Button[] { gpioStatusButton8, gpioStatusButton9, gpioStatusButton7, gpioStatusButton0, gpioStatusButton2, gpioStatusButton3, gpioStatusButton12, gpioStatusButton13, gpioStatusButton14, gpioStatusButton21, gpioStatusButton22, gpioStatusButton23, gpioStatusButton24, gpioStatusButton25, gpioStatusButton15, gpioStatusButton16, gpioStatusButton1, gpioStatusButton4, gpioStatusButton5, gpioStatusButton6, gpioStatusButton10, gpioStatusButton11, gpioStatusButton26, gpioStatusButton27, gpioStatusButton28, gpioStatusButton29 };
                     var button = (Button)sender;
                     int gpio = Convert.ToInt32(button.Name.Substring(15));
-                    Console.WriteLine(gpio);
+                    eraseData();
                     if (button.Text == "INPUT")
                     {
                         button.Text = "OUTPUT";
-                        eraseData();
                         dataOut[0] = (byte) gpio;
                         dataOut[1] = 1;
                         dataOut[2] = 0;
@@ -235,7 +349,6 @@ namespace RaspberryControl
                     else
                     {
                         button.Text = "INPUT";
-                        eraseData();
                         dataOut[0] = (byte)gpio;
                         dataOut[1] = 0;
                         dataOut[2] = 0;
@@ -249,7 +362,7 @@ namespace RaspberryControl
                         }
                     }
                     dataOut[3] = 101;
-                    stream.Write(dataOut, 0, dataOut.Length);
+                    streamWritingBytes(dataOut);
                     
                 }
                 catch(Exception ext) //it catches the  second click...
@@ -403,5 +516,10 @@ namespace RaspberryControl
             else
                 MessageBox.Show("Try again in a few seconds!");
         }
+    }
+    public class constants
+    {
+        internal const int buffersize = 16;
+        internal const int signature = 5678;
     }
 }

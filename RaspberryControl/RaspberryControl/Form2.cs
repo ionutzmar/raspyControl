@@ -40,14 +40,20 @@ namespace RaspberryControl
                 Properties.Settings.Default.password = "";
             Properties.Settings.Default.Save();
 
+            mainForm.password = passwordTextBox.Text;
+            if(usernameTextBox.Text.Length > 15 || passwordTextBox.Text.Length > 15)
+            {
+                MessageBox.Show("Username or password are too long!");
+                loginButton.Text = "LOGIN";
+                return;
+            }
 
             if (!mainForm.connected)
                 mainForm.setButtons();
             if (!mainForm.bw.IsBusy)
                 mainForm.bw.RunWorkerAsync();
             else
-                MessageBox.Show("Try again in a few seconds!");
-
+                MessageBox.Show("Try again in a few seconds!");        
         }
 
         internal void setLoginButtonText(string text)
@@ -61,7 +67,7 @@ namespace RaspberryControl
         }
         private void authForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //Application.Exit();///////////////////////////////////////////////////////////
+            //Application.Exit();
         }
     }
 }
