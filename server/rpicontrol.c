@@ -178,8 +178,8 @@ reconnect:
             bzero(bufferOut, BUFFERSIZE * sizeof(int));
             bufferOut[0] = bufferIn[0];
             bufferOut[2] = digitalRead(bufferIn[0]);
-            bufferOut[3] = 10;
-            //write(clientsockfd, bufferOut, 4);
+            bufferOut[3] = 101;
+-           write(clientsockfd, bufferOut, BUFFERSIZE * sizeof(int));
 	    }
         int i;
         for(i = 0; i < 4 ; i++)
