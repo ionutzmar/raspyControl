@@ -381,7 +381,7 @@ namespace RaspberryControl
             bw.DoWork += bw_DoWork;
             setText();
             setButtons();
-            connectButon.Text = "Trying  to  connect...";
+            //connectButon.Text = "Trying  to  connect...";
             
             readFromServerBw.DoWork += readFromServer_DoWork;
             readFromServerBw.RunWorkerAsync();

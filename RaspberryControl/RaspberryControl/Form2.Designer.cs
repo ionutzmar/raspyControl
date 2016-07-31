@@ -145,6 +145,8 @@
             this.Controls.Add(this.ipLabel);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(364, 332);
+            this.MinimumSize = new System.Drawing.Size(364, 332);
             this.Name = "authForm";
             this.Text = "Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.authForm_FormClosed);

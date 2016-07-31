@@ -67,6 +67,12 @@ namespace RaspberryControl
         }
         private void authForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if (Properties.Settings.Default.password == null)
+                mainForm.password = "1234";
+            else
+                mainForm.password = Properties.Settings.Default.password;
+
+            //Console.WriteLine(e.CloseReason.ToString());
             //Application.Exit();
         }
     }
