@@ -386,10 +386,12 @@ namespace RaspberryControl
             readFromServerBw.DoWork += readFromServer_DoWork;
             readFromServerBw.RunWorkerAsync();
 
-            ipAddressTextBox.Text = Properties.Settings.Default.ipAdress;
+            
 
             settingsForm = new authForm(this);
             settingsForm.ShowDialog();
+
+            ipAddressTextBox.Text = Properties.Settings.Default.ipAdress;
 
             mainForm_SizeChanged(sender, e);
 
